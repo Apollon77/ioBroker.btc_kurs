@@ -1,28 +1,28 @@
 {
-  "name": "iobroker.template",
+  "name": "iobroker.btc_kurs",
   "version": "0.6.0",
-  "description": "ioBroker template Adapter",
+  "description": "ioBroker btc_kurs Adapter",
   "author": {
-    "name": "@@Author@@",
-    "email": "@@email@@"
+    "name": "Andreas Mueller",
+    "email": "heindeep15@googlemail.com"
   },
   "contributors": [
     {
-      "name": "@@Author@@",
-      "email": "@@email@@"
+      "name": "Andreas Mueller",
+      "email": "heindeep15@googlemail.com"
     }
   ],
-  "homepage": "https://github.com/ioBroker/ioBroker.template",
+  "homepage": "https://github.com/ioBroker/ioBroker.btc_kurs",
   "license": "MIT",
   "keywords": [
     "ioBroker",
-    "template",
+    "btc_kurs",
     "Smart Home",
     "home automation"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ioBroker/ioBroker.template"
+    "url": "https://github.com/ioBroker/ioBroker.btc_kurs"
   },
   "dependencies": {},
   "devDependencies": {
@@ -35,7 +35,7 @@
     "test": "node node_modules/mocha/bin/mocha --exit"
   },
   "bugs": {
-    "url": "https://github.com/ioBroker/ioBroker.template/issues"
+    "url": "https://github.com/ioBroker/ioBroker.btc_kurs/issues"
   },
   "readmeFilename": "README.md"
 }
