@@ -1,7 +1,7 @@
 /**
  *
  * btc_kurs adapter
- *
+ * 
  *
  *  file io-package.json comments:
  *
