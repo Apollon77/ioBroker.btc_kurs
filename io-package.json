@@ -47,7 +47,8 @@
             "pt": "docs/pt/admin.md"
         },
         "platform": "Javascript/Node.js",
-        "mode": "daemon",
+        "mode": "schedule",
+        "schedule": "*/5 * * * *",
         "icon": "btc_kurs.png",
         "materialize": true,
         "enabled": true,
