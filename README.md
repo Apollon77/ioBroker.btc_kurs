@@ -6,16 +6,17 @@ Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie 
 
 ### 0.0.1
 * Beta Release
-  Unterstuetzte Waehrungen:
+
+	Unterstuetzte Waehrungen:
 	
-	- Bitcoin
-	- Ethereum
-	- Litecoin
-	- Bitcoin Cash
+		- Bitcoin
+		- Ethereum
+		- Litecoin
+		- Bitcoin Cash
 	
-  Unterstuetzte Exchange:
+	Unterstuetzte Exchange:
   
-    - Bitfinex
+		- Bitfinex
   
 
 ## License
