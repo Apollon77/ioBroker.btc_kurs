@@ -1,6 +1,6 @@
 {
   "name": "iobroker.btc_kurs",
-  "version": "0.6.0",
+  "version": "0.0.1",
   "description": "ioBroker btc_kurs Adapter",
   "author": {
     "name": "Andreas Mueller",
@@ -12,7 +12,7 @@
       "email": "heindeep15@googlemail.com"
     }
   ],
-  "homepage": "https://github.com/ioBroker/ioBroker.btc_kurs",
+  "homepage": "https://github.com/heindeep/ioBroker.btc_kurs",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ioBroker/ioBroker.btc_kurs"
+    "url": "https://github.com/heindeep/ioBroker.btc_kurs"
   },
   "dependencies": {},
   "devDependencies": {
@@ -35,7 +35,7 @@
     "test": "node node_modules/mocha/bin/mocha --exit"
   },
   "bugs": {
-    "url": "https://github.com/ioBroker/ioBroker.btc_kurs/issues"
+    "url": "https://github.com/heindeep/ioBroker.btc_kurs/issues"
   },
   "readmeFilename": "README.md"
 }

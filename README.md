@@ -2,10 +2,21 @@
 # ioBroker.btc_kurs
 =================
 
-This adapter is a btc_kurs for the creation of an ioBroker adapter. You do not need it at least that you plan developing your own adapter.
+Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfuegung.
 
 ### 0.0.1
-* (bluefox) initial release
+* Beta Release
+  Unterstuetzte Waehrungen:
+	
+	- Bitcoin
+	- Ethereum
+	- Litecoin
+	- Bitcoin Cash
+	
+  Unterstuetzte Exchange:
+  
+    - Bitfinex
+  
 
 ## License
 The MIT License (MIT)
