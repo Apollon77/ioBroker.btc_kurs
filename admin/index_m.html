@@ -13,12 +13,18 @@
 <script type="text/javascript" src="../../js/adapter-settings.js"></script>
 <script type="text/javascript" src="words.js"></script>
  <style>
-  .m .col .select-wrapper+label {
-   top: -26px;  
-  }
-     .m span{
-         font-size: 0.9em;
-     }
+	.m .col .select-wrapper+label {
+		top: -26px;  
+	}
+	.m span{
+		font-size: 0.9em;
+	}
+	table {
+        border-collapse: collapse;
+    }
+    td.line{
+        border-top:1px solid black;
+    }
  </style>
 <!-- you have to define 2 functions in the global scope: -->
 <script type="text/javascript">
@@ -70,23 +76,33 @@
 <br>
 <br>
 <br>
-    <div class="m adapter-container">
-        <div class="row">
             <div class="row">
                 <div class="input-field col s6">
                     <img src="btc_kurs.png" class="logo">
                 </div>
             </div>
+			<table>
+                <tbody>
+                    <tr>
+                        <td class="translate">Bitcoin</td>
+                        <td>&nbsp;&nbsp;<input class="value" id="btc" type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td class="translate">Ethereum</td>
+                        <td>&nbsp;&nbsp;<input class="value" id="eth" type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td class="translate">Litecoin</td>
+                        <td>&nbsp;&nbsp;<input class="value" id="ltc" type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td class="translate">Bitcoin Cash</td>
+                        <td>&nbsp;&nbsp;<input class="value" id="bch" type="checkbox"/></td>
+                    </tr>
+                </tbody>
+            </table>
+	<div class="m adapter-container">
             <div class="row">
-                <div class="input-field col s12 m4">
-                    <select class="value" id="cryptocurrency">
-                        <option value="btc" class="translate">Bitcoin</option>
-                        <option value="eth" class="translate">Ethereum</option>
-						<option value="ltc" class="translate">Litecoin</option>
-						<option value="btc" class="translate">Bitcoin Cash</option>
-                    </select>
-                    <label for="cryptocurrency" class="translate">Cryptocurrency</label>
-                </div>
                 <div class="input-field col s12 m8">
                     <select class="value" id="exchange">
                         <option value="bitfinex" class="translate">Bitfinex</option>
@@ -94,7 +110,6 @@
 					<label for="exchange" class="translate">Crypto Exchange</label>
                 </div>
             </div>
-        </div>
     </div>
 </body>
 </html>
