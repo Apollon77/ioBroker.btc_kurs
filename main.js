@@ -176,5 +176,5 @@ function main() {
 	
 	setTimeout(function () {
 		adapter.stop();
-	}, 10000);
+	}, 30000);
 }
