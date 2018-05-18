@@ -1,6 +1,6 @@
 {
   "name": "iobroker.btc_kurs",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "ioBroker btc_kurs Adapter",
   "author": {
     "name": "Andreas Mueller",

@@ -2,10 +2,10 @@
 # ioBroker.btc_kurs
 =================
 
-Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfuegung.
+### Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfuegung.
 
 
-	Unterstuetzte Waehrungen:
+###	Unterstuetzte Waehrungen:
 	
 		- Bitcoin
 		- Ethereum
@@ -18,11 +18,13 @@ Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie 
 		- NEO
 		- Monero
 	
-	Unterstuetzte Exchange:
+###	Unterstuetzte Exchange:
   
 		- Bitfinex
-## Changelog		
-#### 0.1.1
+		
+#### Changelog
+		
+### 0.1.1
 * (HeinDeep) Edit adminmenu
 * (HeinDeep) Add Ripple
 * (HeinDeep) Add EOS
@@ -32,7 +34,7 @@ Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie 
 * (HeinDeep) Add Monero
 
 		
-#### 0.1.0
+### 0.1.0
 * (HeinDeep) first release
 
 ### 0.0.1

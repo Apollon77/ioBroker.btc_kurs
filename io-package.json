@@ -1,11 +1,19 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.0.1",
+        "version": "0.1.1",
         "news": {
-            "0.0.1": {
-                "en": "initial adapter",
-                "de": "Initiale Version"
+			"0.1.1": {
+				"en": "add new cryptocurrencies",
+				"de": "Neue Kryptowaehrungen hinzugefuegt"
+			},
+			"0.1.0": {
+				"en": "first release",
+				"de": "Erste freigegebene Version"
+			},
+			"0.0.1": {
+                "en": "initial release",
+                "de": "Erste Version"
             }
         },
 		"title": "BTC Kurs Adapter",
