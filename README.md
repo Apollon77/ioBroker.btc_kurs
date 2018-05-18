@@ -2,7 +2,8 @@
 # ioBroker.btc_kurs
 =================
 
-## Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfuegung.
+## Holt die aktuellen USD - Kurse von verschiedenen Kryptowährungen
+## und stellt sie dem ioBroker zur Verfuegung.
 
 
 ###	Unterstuetzte Waehrungen:
