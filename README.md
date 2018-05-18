@@ -2,7 +2,7 @@
 # ioBroker.btc_kurs
 =================
 
-### Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfuegung.
+## Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfuegung.
 
 
 ###	Unterstuetzte Waehrungen:
@@ -22,7 +22,7 @@
   
 		- Bitfinex
 		
-#### Changelog
+## Changelog
 		
 ### 0.1.1
 * (HeinDeep) Edit adminmenu
