@@ -7,16 +7,16 @@
 
 ###	Unterstuetzte Waehrungen:
 	
-		- Bitcoin
-		- Ethereum
-		- Litecoin
-		- Bitcoin Cash
-		- Ripple
-		- EOS
-		- Stellar
-		- IOTA
-		- NEO
-		- Monero
+		- Bitcoin (BTC)
+		- Ethereum (ETH)
+		- Litecoin (LTC)
+		- Bitcoin Cash (BCH)
+		- Ripple (XRP)
+		- EOS (EOS)
+		- Stellar (XLM)
+		- IOTA (MIOTA)
+		- NEO (NEO)
+		- Monero (XMR)
 	
 ###	Unterstuetzte Exchange:
   
@@ -26,13 +26,7 @@
 		
 ### 0.1.1
 * (HeinDeep) Edit adminmenu
-* (HeinDeep) Add Ripple
-* (HeinDeep) Add EOS
-* (HeinDeep) Add Stellar	
-* (HeinDeep) Add IOTA
-* (HeinDeep) Add NEO
-* (HeinDeep) Add Monero
-
+* (HeinDeep) Add Ripple (XRP), EOS (EOS), Stellar (XLM), IOTA (MIOTA), NEO (NEO) and Monero (XMR)
 		
 ### 0.1.0
 * (HeinDeep) first release
