@@ -27,6 +27,10 @@
 		- Bitfinex
 		
 ## Changelog
+
+### 0.1.2
+* (HeinDeep) first release
+* (HeinDeep) add to NPM
 		
 ### 0.1.1
 * (HeinDeep) first release
