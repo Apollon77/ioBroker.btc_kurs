@@ -5,46 +5,24 @@
         "news": {
             "0.0.1": {
                 "en": "initial adapter",
-                "de": "Initiale Version",
-                "ru": "Первоначальный адаптер",
-                "pt": "Versão inicial",
-                "fr": "Version initiale",
-                "nl": "Eerste release"
+                "de": "Initiale Version"
             }
         },
 		"title": "BTC Kurs Adapter",
         "titleLang": {
-            "en": "Javascript/Node.js based btc_kurs adapter",
-            "de": "Javascript / Node.js basierte Vorlagenadapter",
-            "ru": "Адаптер шаблонов на основе Javascript / Node.js",
-            "pt": "Adaptador de modelo baseado em Javascript / Node.js",
-            "nl": "Javascript / Node.js gebaseerde sjabloonadapter",
-            "fr": "Javascript / Node.js basé adaptateur de modèle",
-            "it": "Adattatore modello basato su Javascript / Node.js",
-            "es": "Adaptador de plantilla basado en JavaScript / Node.js"
+            "en": "Cryptocurrency exchange rate",
+            "de": "Kryptowährung Wechselkurs"
         },
         "desc": {
-            "en": "ioBroker btc_kurs Adapter",
-            "de": "ioBroker Btc_kurs Adapter",
-            "ru": "ioBroker Btc_kurs драйвер как образец",
-            "pt": "Modelo de adaptador para o ioBroker",
-            "fr": "ioBroker adaptateur modèle",
-            "nl": "ioBroker Btc_kurs Adapter",
-            "it": "Adattatore modello ioBroker",
-            "es": "Adaptador de plantilla ioBroker"
+            "en": "This adapter reads the USD current exchange rates of various cryptocurrencies and makes them available to the ioBroker",
+            "de": "Dieser Adpater liest die aktuellen USD-Wechselkurse verschiedener Kryptowaehrungen und stellt sie dem ioBroker zur Verfuegung"
         },
         "authors": [
             "Andreas Mueller <heindeep15@googlemail.com>"
         ],
         "docs": {
             "en": "docs/en/admin.md",
-            "ru": "docs/ru/admin.md",
-            "de": "docs/de/admin.md",
-            "es": "docs/es/admin.md",
-            "it": "docs/it/admin.md",
-            "fr": "docs/fr/admin.md",
-            "nl": "docs/nl/admin.md",
-            "pt": "docs/pt/admin.md"
+            "de": "docs/de/admin.md"
         },
         "platform": "Javascript/Node.js",
         "mode": "schedule",

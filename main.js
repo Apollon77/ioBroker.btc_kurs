@@ -38,13 +38,18 @@ function main() {
 	var eth = adapter.config.eth;
 	var ltc = adapter.config.ltc;
 	var bch = adapter.config.bch;
+	var xrp = adapter.config.xrp;
+	var eos = adapter.config.eos;
+	var xlm = adapter.config.xlm;
+	var iot = adapter.config.iot;
+	var neo = adapter.config.neo;
+	var xmr = adapter.config.xmr;
     
 	if (exchange == "bitfinex") {
 		var url = "https://api.bitfinex.com/v1/pubticker/";
 	}
 		
 	if (btc == true) {
-		adapter.log.warn('Request BTC done');
 		request(
 			{
 				url: url + 'btcusd',
@@ -76,7 +81,6 @@ function main() {
 		);
 	}
 	if (eth == true) {
-		adapter.log.warn('Request ETH done');
 		request(
 			{
 				url: url + 'ethusd',
@@ -109,7 +113,6 @@ function main() {
 	}
 
 	if (ltc == true) {
-		adapter.log.warn('Request LTC done');
 		request(
 			{
 				url: url + 'ltcusd',
@@ -142,7 +145,6 @@ function main() {
 	}
 
 	if (bch == true) {
-		adapter.log.warn('Request BCH done');
 		request(
 			{
 				url: url + 'bchusd',
@@ -167,6 +169,198 @@ function main() {
 					});
 					adapter.log.info('BCH-USD_' + exchange + ': ' + ticker);	
 					adapter.setState('BCH-USD_' + exchange, {val: ticker, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			}
+		);
+	}
+	
+	if (xrp == true) {
+		request(
+			{
+				url: url + 'xrpusd',
+				json: true
+			}, 
+			function(error, response, content) {
+				if (!error && response.statusCode == 200) {
+					let data = JSON.parse(JSON.stringify(content));
+					var json = JSON.stringify(data);
+					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var output = eval("(function(){return " + jsonoutput + ";})()");
+					var ticker = parseFloat(output.last_price);
+					ticker = number_format(ticker,2,'.','');
+					adapter.setObject('XRP-USD_' + exchange, {
+						type: 'state',
+						common: {
+							name: 'XRP-USD_' + exchange,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('XRP-USD_' + exchange + ': ' + ticker);	
+					adapter.setState('XRP-USD_' + exchange, {val: ticker, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			}
+		);
+	}
+	
+	if (eos == true) {
+		request(
+			{
+				url: url + 'eosusd',
+				json: true
+			}, 
+			function(error, response, content) {
+				if (!error && response.statusCode == 200) {
+					let data = JSON.parse(JSON.stringify(content));
+					var json = JSON.stringify(data);
+					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var output = eval("(function(){return " + jsonoutput + ";})()");
+					var ticker = parseFloat(output.last_price);
+					ticker = number_format(ticker,2,'.','');
+					adapter.setObject('EOS-USD_' + exchange, {
+						type: 'state',
+						common: {
+							name: 'EOS-USD_' + exchange,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('EOS-USD_' + exchange + ': ' + ticker);	
+					adapter.setState('EOS-USD_' + exchange, {val: ticker, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			}
+		);
+	}
+	
+	if (xlm == true) {
+		request(
+			{
+				url: url + 'xlmusd',
+				json: true
+			}, 
+			function(error, response, content) {
+				if (!error && response.statusCode == 200) {
+					let data = JSON.parse(JSON.stringify(content));
+					var json = JSON.stringify(data);
+					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var output = eval("(function(){return " + jsonoutput + ";})()");
+					var ticker = parseFloat(output.last_price);
+					ticker = number_format(ticker,2,'.','');
+					adapter.setObject('XLM-USD_' + exchange, {
+						type: 'state',
+						common: {
+							name: 'XLM-USD_' + exchange,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('XLM-USD_' + exchange + ': ' + ticker);	
+					adapter.setState('XLM-USD_' + exchange, {val: ticker, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			}
+		);
+	}
+	
+	if (iot == true) {
+		request(
+			{
+				url: url + 'iotusd',
+				json: true
+			}, 
+			function(error, response, content) {
+				if (!error && response.statusCode == 200) {
+					let data = JSON.parse(JSON.stringify(content));
+					var json = JSON.stringify(data);
+					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var output = eval("(function(){return " + jsonoutput + ";})()");
+					var ticker = parseFloat(output.last_price);
+					ticker = number_format(ticker,2,'.','');
+					adapter.setObject('MIOTA-USD_' + exchange, {
+						type: 'state',
+						common: {
+							name: 'MIOTA-USD_' + exchange,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('MIOTA-USD_' + exchange + ': ' + ticker);	
+					adapter.setState('MIOTA-USD_' + exchange, {val: ticker, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			}
+		);
+	}
+
+	if (neo == true) {
+		request(
+			{
+				url: url + 'neousd',
+				json: true
+			}, 
+			function(error, response, content) {
+				if (!error && response.statusCode == 200) {
+					let data = JSON.parse(JSON.stringify(content));
+					var json = JSON.stringify(data);
+					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var output = eval("(function(){return " + jsonoutput + ";})()");
+					var ticker = parseFloat(output.last_price);
+					ticker = number_format(ticker,2,'.','');
+					adapter.setObject('NEO-USD_' + exchange, {
+						type: 'state',
+						common: {
+							name: 'NEO-USD_' + exchange,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('NEO-USD_' + exchange + ': ' + ticker);	
+					adapter.setState('NEO-USD_' + exchange, {val: ticker, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			}
+		);
+	}
+	
+	if (xmr == true) {
+		request(
+			{
+				url: url + 'xmrusd',
+				json: true
+			}, 
+			function(error, response, content) {
+				if (!error && response.statusCode == 200) {
+					let data = JSON.parse(JSON.stringify(content));
+					var json = JSON.stringify(data);
+					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var output = eval("(function(){return " + jsonoutput + ";})()");
+					var ticker = parseFloat(output.last_price);
+					ticker = number_format(ticker,2,'.','');
+					adapter.setObject('XMR-USD_' + exchange, {
+						type: 'state',
+						common: {
+							name: 'XMR-USD_' + exchange,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('XMR-USD_' + exchange + ': ' + ticker);	
+					adapter.setState('XMR-USD_' + exchange, {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}

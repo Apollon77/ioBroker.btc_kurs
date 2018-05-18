@@ -4,8 +4,6 @@
 
 Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfuegung.
 
-### 0.0.1
-* Beta Release
 
 	Unterstuetzte Waehrungen:
 	
@@ -13,11 +11,34 @@ Holt die aktuellen USD - Kurs von verschiedenen Kryptowährungen und stellt sie 
 		- Ethereum
 		- Litecoin
 		- Bitcoin Cash
+		- Ripple
+		- EOS
+		- Stellar
+		- IOTA
+		- NEO
+		- Monero
 	
 	Unterstuetzte Exchange:
   
 		- Bitfinex
-  
+## Changelog		
+#### 0.1.1
+* (HeinDeep) Edit adminmenu
+* (HeinDeep) Add Ripple
+* (HeinDeep) Add EOS
+* (HeinDeep) Add Stellar	
+* (HeinDeep) Add IOTA
+* (HeinDeep) Add NEO
+* (HeinDeep) Add Monero
+
+		
+#### 0.1.0
+* (HeinDeep) first release
+
+### 0.0.1
+* (HeinDeep) initial release
+
+ 
 
 ## License
 The MIT License (MIT)
