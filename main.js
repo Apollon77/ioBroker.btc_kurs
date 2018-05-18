@@ -57,9 +57,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
@@ -88,9 +88,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
@@ -120,9 +120,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
@@ -152,9 +152,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
@@ -184,9 +184,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
@@ -216,9 +216,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
@@ -248,9 +248,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
@@ -280,9 +280,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
@@ -312,9 +312,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
@@ -344,9 +344,9 @@ function main() {
 			}, 
 			function(error, response, content) {
 				if (!error && response.statusCode == 200) {
-					let data = JSON.parse(JSON.stringify(content));
+					var data = JSON.parse(JSON.stringify(content));
 					var json = JSON.stringify(data);
-					let jsonoutput = JSON.parse(JSON.stringify(json));
+					var jsonoutput = JSON.parse(JSON.stringify(json));
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');

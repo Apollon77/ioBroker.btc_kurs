@@ -28,6 +28,10 @@
 		
 ## Changelog
 
+### 0.1.3
+* (HeinDeep) first release
+* (HeinDeep) fix bug 
+
 ### 0.1.2
 * (HeinDeep) first release
 * (HeinDeep) add to NPM

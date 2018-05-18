@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.1.2",
+        "version": "0.1.3",
         "news": {
+			"0.1.3": {
+				"en": "fix bug",
+				"de": "Fehler behoben"
+			},
 			"0.1.2": {
 				"en": "add to npm",
 				"de": "Zu NPM hinzugefuegt"
