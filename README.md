@@ -25,11 +25,13 @@
 ## Changelog
 		
 ### 0.1.1
-* (HeinDeep) Edit adminmenu
-* (HeinDeep) Add Ripple (XRP), EOS (EOS), Stellar (XLM), IOTA (MIOTA), NEO (NEO) and Monero (XMR)
+* (HeinDeep) first release
+* (HeinDeep) update adminmenu
+* (HeinDeep) add Ripple (XRP), EOS (EOS), Stellar (XLM), IOTA (MIOTA), NEO (NEO), Monero (XMR)
 		
 ### 0.1.0
 * (HeinDeep) first release
+* (HeinDeep) add Bitcoin (BTC), Ethererum (ETH), Litecoin (LTC), Bitcoin Cash (BCH)
 
 ### 0.0.1
 * (HeinDeep) initial release
