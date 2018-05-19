@@ -11,7 +11,7 @@
 <script type="text/javascript" src="../../js/translate.js"></script>
 <script type="text/javascript" src="../../lib/js/materialize.js"></script>
 <script type="text/javascript" src="../../js/adapter-settings.js"></script>
-<script type="text/javascript" src="words.js"></script>
+
  <style>
 	.m .col .select-wrapper+label {
 		top: -26px;  
@@ -19,17 +19,24 @@
 	.m span{
 		font-size: 0.9em;
 	}
-	table {
-        border-collapse: collapse;
-    }
-    td.line{
-        border-top:1px solid black;
-    }
  </style>
 <!-- you have to define 2 functions in the global scope: -->
 <script type="text/javascript">
-
-    // the function loadSettings has to exist ...
+	systemDictionary = {
+		"Cryptocurrency": {
+			"en": "Cryptocurrency",
+			"de": "Kryptowährung",
+		},
+		"Crypto Exchange": {
+			"en": "Crypto Exchange",
+			"de": "Kryptowährungen Börse",
+		},
+		"Select Cryptocurrency": {
+			"en": "Select Cryptocurrency",
+			"de": "Kryptowährung auswählen",
+		}
+	};
+	// the function loadSettings has to exist ...
     function load(settings, onChange) {
         // example: select elements with id=key and class=value and insert value
        if (!settings) return;
@@ -76,8 +83,8 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s2"><a href="#tab-ticker" class="translate">Ticker</a></li>
-				<li class="tab col s2"><a href="#tab-wallet" class="translate">Wallet</a></li>
+                <li class="tab col s2"><a href="#tab-ticker">Ticker</a></li>
+				<li class="tab col s2"><a href="#tab-wallet">Wallet</a></li>
             </ul>
         </div>
 		<div id="tab-ticker" class="col s12 page">
@@ -94,35 +101,35 @@
 			<div class="row">
 				<div class="col s12 m12 l12">
                     <input class="value" id="btc" type="checkbox" />
-                    <label class="translate" >Bitcoin (BTC)</label>
+                    <label>Bitcoin (BTC)</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <input class="value" id="eth" type="checkbox" />
-                    <label class="translate" >Ethereum (ETH)</label>
+                    <label>Ethereum (ETH)</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <input class="value" id="ltc" type="checkbox" />
-                    <label class="translate" >Litecoin (LTC)</label>
+                    <label>Litecoin (LTC)</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <input class="value" id="bch" type="checkbox" />
-                    <label class="translate" >Bitcoin Cash (BCH)</label>
+                    <label>Bitcoin Cash (BCH)</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <input class="value" id="xrp" type="checkbox" />
-                    <label class="translate" >Ripple (XRP)</label>
+                    <label>Ripple (XRP)</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <input class="value" id="eos" type="checkbox" />
-                    <label class="translate" >EOS (EOS)</label>
+                    <label>EOS (EOS)</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <input class="value" id="xlm" type="checkbox" />
-                    <label class="translate" >Stellar (XLM)</label>
+                    <label>Stellar (XLM)</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <input class="value" id="iot" type="checkbox" />
-                    <label class="translate" >IOTA (MIOTA)</label>
+                    <label>IOTA (MIOTA)</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <input class="value" id="neo" type="checkbox" />
@@ -130,13 +137,13 @@
                 </div>
                 <div class="col s12 m12 l12">
                     <input class="value" id="xmr" type="checkbox" />
-                    <label class="translate" >Monero (XMR)</label>
+                    <label>Monero (XMR)</label>
                 </div>
             </div>			
             <div class="row">
                 <div class="input-field col s12 m3">
                     <select class="value" id="exchange">
-                        <option value="bitfinex" class="translate">Bitfinex</option>
+                        <option value="bitfinex">Bitfinex</option>
                     </select>
 					<label for="exchange" class="translate">Crypto Exchange</label>
                 </div>
