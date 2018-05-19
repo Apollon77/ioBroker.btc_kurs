@@ -39,7 +39,7 @@
         },
         "desc": {
             "en": "This adapter reads the USD current exchange rates of various cryptocurrencies and makes them available to the ioBroker. In addition, the wallet can be queried",
-            "de": "Dieser Adpater liest die aktuellen USD-Wechselkurse verschiedener Kryptowaehrungen und stellt sie dem ioBroker zur Verfuegung. Zusätzlich kann die Wallet abgefragt werden"
+            "de": "Dieser Adpater liest die aktuellen USD-Wechselkurse verschiedener Kryptowährungen und stellt sie dem ioBroker zur Verfügung. Zusätzlich kann die Wallet abgefragt werden"
         },
         "authors": [
             "Andreas Mueller <heindeep15@googlemail.com>"

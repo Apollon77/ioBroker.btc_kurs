@@ -7,7 +7,7 @@
 
 [![NPM](https://nodei.co/npm/iobroker.btc_kurs.png?downloads=true)](https://nodei.co/npm/iobroker.btc_kurs/)
 
-### Holt die aktuellen USD - Kurse von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfuegung. Zusätzlich kann die Wallet abgefragt werden.
+### Holt die aktuellen USD - Kurse von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfügung. Zusätzlich kann die Wallet abgefragt werden.
 
 ###	Unterstuetzte Waehrungen:
 	
