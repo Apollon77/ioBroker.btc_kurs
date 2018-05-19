@@ -28,14 +28,39 @@
 			"de": "Kryptowährung",
 		},
 		"Crypto Exchange": {
-			"en": "Crypto Exchange",
-			"de": "Kryptowährungen Börse",
+			"en": "Exchange",
+			"de": "Börse",
 		},
 		"Select Cryptocurrency": {
 			"en": "Select Cryptocurrency",
 			"de": "Kryptowährung auswählen",
+		},
+		"Wallet adress": {
+			"en": "Wallet adress",
+			"de": "Wallet Adresse",
 		}
 	};
+    function showHideSettings() {
+		$('#btc_wallet_adress').hide();
+		$('#eth_wallet_adress').hide();
+		if ($('#btc_wallet').prop('checked')) {
+            $('#btc_wallet_adress').show();
+        } else {
+            $('#btc_wallet_adress').hide();
+        }
+		if ($('#eth_wallet').prop('checked')) {
+            $('#eth_wallet_adress').show();
+        } else {
+            $('#eth_wallet_adress').hide();
+        }
+    }
+	
+    function init() {
+        showHideSettings();
+        $('#btc_wallet').on('change', showHideSettings);
+		$('#eth_wallet').on('change', showHideSettings);
+    }
+
 	// the function loadSettings has to exist ...
     function load(settings, onChange) {
         // example: select elements with id=key and class=value and insert value
@@ -57,6 +82,7 @@
                 });
             }
         });
+		init();
         onChange(false);
         M.updateTextFields();  // function Materialize.updateTextFields(); to reinitialize all the Materialize labels on the page if you are dynamically adding inputs.
     }
@@ -83,8 +109,8 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s2"><a href="#tab-ticker">Ticker</a></li>
-				<li class="tab col s2"><a href="#tab-wallet">Wallet</a></li>
+                <li class="tab col s2"><a href="#tab-ticker" class="translate active">Ticker</a></li>
+				<li class="tab col s2 wallet-settings"><a href="#tab-wallet" class="translate">Wallet</a></li>
             </ul>
         </div>
 		<div id="tab-ticker" class="col s12 page">
@@ -155,6 +181,26 @@
 					<img src="btc_kurs.png" class="logo">
                 </div>
  			</div>
+            <div class="row">
+				<div class="input-field col s12 m12">
+					<input id="btc_wallet" type="checkbox" class="value" />
+					<span for="btc_wallet">Bitcoin Wallet</span>
+				</div>
+				<div class="input-field col s12 m6 l4" id="btc_wallet_adress">
+					<input class="value" id="btc_wallet_adress" size="35" maxlength="35" type="text"/>
+					<label class="translate" for="btc_wallet_adress">Wallet adress</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12 m12">
+					<input id="eth_wallet" type="checkbox" class="value" />
+					<span for="eth_wallet">Ethereum Wallet</span>
+				</div>
+				<div class="input-field col s12 m6 l4" id="eth_wallet_adress">
+					<input class="value" id="eth_wallet_adress" size="50" maxlength="50" type="text"/>
+					<label class="translate" for="eth_wallet_adress">Wallet adress</label>
+				</div>
+			</div>
         </div>
     </div>
 </div>			

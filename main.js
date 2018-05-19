@@ -44,7 +44,12 @@ function main() {
 	var iot = adapter.config.iot;
 	var neo = adapter.config.neo;
 	var xmr = adapter.config.xmr;
-    
+	var btc_wallet = adapter.config.btc_wallet;
+	var btc_wallet_adress = adapter.config.btc_wallet_adress;
+	var eth_wallet = adapter.config.eth_wallet;
+	var eth_wallet_adress = adapter.config.eth_wallet_adress;
+	
+	// Ticker
 	if (exchange == "bitfinex") {
 		var url = "https://api.bitfinex.com/v1/pubticker/";
 	}
@@ -63,17 +68,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('BTC-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.btc', {
 						type: 'state',
 						common: {
-							name: 'BTC-USD_' + exchange,
+							name: 'btc_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('BTC-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('BTC-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('btc_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.btc', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -94,17 +99,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('ETH-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.eth', {
 						type: 'state',
 						common: {
-							name: 'ETH-USD_' + exchange,
+							name: 'eth_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('ETH-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('ETH-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('eth_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.eth', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -126,17 +131,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('LTC-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.ltc', {
 						type: 'state',
 						common: {
-							name: 'LTC-USD_' + exchange,
+							name: 'ltc_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('LTC-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('LTC-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('ltc_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.ltc', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -158,17 +163,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('BCH-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.bch', {
 						type: 'state',
 						common: {
-							name: 'BCH-USD_' + exchange,
+							name: 'bch_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('BCH-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('BCH-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('bch_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.bch', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -190,17 +195,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('XRP-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.xrp', {
 						type: 'state',
 						common: {
-							name: 'XRP-USD_' + exchange,
+							name: 'xrp_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('XRP-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('XRP-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('xrp_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.xrp', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -222,17 +227,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('EOS-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.eos', {
 						type: 'state',
 						common: {
-							name: 'EOS-USD_' + exchange,
+							name: 'eos_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('EOS-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('EOS-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('eos_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.eos', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -254,17 +259,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('XLM-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.xlm', {
 						type: 'state',
 						common: {
-							name: 'XLM-USD_' + exchange,
+							name: 'xlm_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('XLM-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('XLM-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('xlm_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.xlm', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -286,17 +291,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('MIOTA-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.miota', {
 						type: 'state',
 						common: {
-							name: 'MIOTA-USD_' + exchange,
+							name: 'miota_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('MIOTA-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('MIOTA-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('miota_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.miota', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -318,17 +323,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('NEO-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.neo', {
 						type: 'state',
 						common: {
-							name: 'NEO-USD_' + exchange,
+							name: 'neo_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('NEO-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('NEO-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('neo_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.neo', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -350,17 +355,17 @@ function main() {
 					var output = eval("(function(){return " + jsonoutput + ";})()");
 					var ticker = parseFloat(output.last_price);
 					ticker = number_format(ticker,2,'.','');
-					adapter.setObject('XMR-USD_' + exchange, {
+					adapter.setObject('ticker.' + exchange + '.xmr', {
 						type: 'state',
 						common: {
-							name: 'XMR-USD_' + exchange,
+							name: 'xmr_' + exchange,
 							type: 'string',
 							role: 'variable'
 						},
 						native: {}
 					});
-					adapter.log.info('XMR-USD_' + exchange + ': ' + ticker);	
-					adapter.setState('XMR-USD_' + exchange, {val: ticker, ack: true});
+					adapter.log.info('xmr_' + exchange + ': ' + ticker);	
+					adapter.setState('ticker.' + exchange + '.xmr', {val: ticker, ack: true});
 				} else {
 					adapter.log.error(error);
 				}
@@ -368,7 +373,66 @@ function main() {
 		);
 	}
 	
+	// Wallet
+	if (btc_wallet == true) {
+		if (btc_wallet_adress != null) {
+			const options = {
+				url: 'https://blockchain.info/q/addressbalance/' + btc_wallet_adress,
+				json: false
+			}
+			request(options, (error, response, content) => {
+				if (!error && response.statusCode == 200) {
+					var balance = number_format(content / 100000000,8,'.','');
+					adapter.setObject('wallet.btc', {
+						type: 'state',
+						common: {
+							name: btc_wallet_adress,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('btc_wallet (' + btc_wallet_adress + '): ' + balance);
+					adapter.setState('wallet.btc', {val: balance, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			});
+		}
+	}
+	if (eth_wallet == true) {
+		if (eth_wallet_adress != null) {
+			const options = {
+				url: 'https://api.etherscan.io/api?module=account&action=balance&address=' + eth_wallet_adress,
+				json: true
+			}
+			request.post(options, (error, response, content) => {
+				if (!error && response.statusCode == 200) {
+					var data = JSON.parse(JSON.stringify(content));
+					var json = JSON.stringify(data);
+					var jsonoutput = JSON.parse(JSON.stringify(json));
+					var output = eval("(function(){return " + jsonoutput + ";})()");
+					var balance = parseFloat(output.result);
+					var balance = number_format(balance / 1000000000000000000,8,'.','');
+					adapter.setObject('wallet.eth', {
+						type: 'state',
+						common: {
+							name: eth_wallet_adress,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('eth_wallet (' + eth_wallet_adress + '): ' + balance);
+					adapter.setState('wallet.eth', {val: balance, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			});
+		}
+	}
+	
 	setTimeout(function () {
 		adapter.stop();
-	}, 30000);
+	}, 40000);
 }

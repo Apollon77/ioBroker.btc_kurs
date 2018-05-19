@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.1.3",
+        "version": "0.2.0",
         "news": {
+			"0.2.0": {
+				"en": "add wallet - BTC and ETH",
+				"de": "Wallet Abfrage für BTC und ETH hinzugefügt"
+			},
 			"0.1.3": {
 				"en": "fix bug",
 				"de": "Fehler behoben"
@@ -30,8 +34,8 @@
             "de": "Kryptowährung Wechselkurs"
         },
         "desc": {
-            "en": "This adapter reads the USD current exchange rates of various cryptocurrencies and makes them available to the ioBroker",
-            "de": "Dieser Adpater liest die aktuellen USD-Wechselkurse verschiedener Kryptowaehrungen und stellt sie dem ioBroker zur Verfuegung"
+            "en": "This adapter reads the USD current exchange rates of various cryptocurrencies and makes them available to the ioBroker. In addition, the wallet can be queried",
+            "de": "Dieser Adpater liest die aktuellen USD-Wechselkurse verschiedener Kryptowaehrungen und stellt sie dem ioBroker zur Verfuegung. Zusätzlich kann die Wallet abgefragt werden"
         },
         "authors": [
             "Andreas Mueller <heindeep15@googlemail.com>"
