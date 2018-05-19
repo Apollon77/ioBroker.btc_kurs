@@ -48,6 +48,12 @@ function main() {
 	var btc_wallet_adress = adapter.config.btc_wallet_adress;
 	var eth_wallet = adapter.config.eth_wallet;
 	var eth_wallet_adress = adapter.config.eth_wallet_adress;
+	var ltc_wallet = adapter.config.ltc_wallet;
+	var ltc_wallet_adress = adapter.config.ltc_wallet_adress;
+	var bch_wallet = adapter.config.bch_wallet;
+	var bch_wallet_adress = adapter.config.bch_wallet_adress;
+	var xrp_wallet = adapter.config.xrp_wallet;
+	var xrp_wallet_adress = adapter.config.xrp_wallet_adress;
 	
 	// Ticker
 	if (exchange == "bitfinex") {
@@ -431,6 +437,94 @@ function main() {
 			});
 		}
 	}
+	
+	if (ltc_wallet == true) {
+		if (ltc_wallet_adress != null) {
+			const options = {
+				url: 'https://api.blockcypher.com/v1/ltc/main/addrs/' + ltc_wallet_adress + '/balance',
+				json: true
+			}
+			request(options, (error, response, content) => {
+				if (!error && response.statusCode == 200) {
+					var data = JSON.parse(JSON.stringify(content));
+					var json = JSON.stringify(data);
+					var jsonoutput = JSON.parse(JSON.stringify(json));
+					var output = eval("(function(){return " + jsonoutput + ";})()");
+					var balance = parseFloat(output.balance);
+					var balance = number_format(balance / 100000000,8,'.','');
+					adapter.setObject('wallet.ltc', {
+						type: 'state',
+						common: {
+							name: ltc_wallet_adress,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('ltc_wallet (' + ltc_wallet_adress + '): ' + balance);
+					adapter.setState('wallet.ltc', {val: balance, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			});
+		}
+	}
+	
+	if (bch_wallet == true) {
+		if (bch_wallet_adress != null) {
+			const options = {
+				url: 'https://cashexplorer.bitcoin.com/api/addr/' + bch_wallet_adress + '/balance',
+				json: false
+			}
+			request(options, (error, response, content) => {
+				if (!error && response.statusCode == 200) {
+					var balance = number_format(content / 100000000,8,'.','');
+					adapter.setObject('wallet.bch', {
+						type: 'state',
+						common: {
+							name: bch_wallet_adress,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('bch_wallet (' + bch_wallet_adress + '): ' + balance);
+					adapter.setState('wallet.bch', {val: balance, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			});
+		}
+	}
+	
+	if (xrp_wallet == true) {
+		if (xrp_wallet_adress != null) {
+			const options = {
+				url: 'https://data.ripple.com/v2/accounts/' + xrp_wallet_adress + '/balances',
+				json: true
+			}
+			request(options, (error, response, content) => {
+				if (!error && response.statusCode == 200) {
+					var obj = content.balances[0];
+					var balance = number_format(obj.value,8,'.','');
+					adapter.setObject('wallet.xrp', {
+						type: 'state',
+						common: {
+							name: xrp_wallet_adress,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					adapter.log.info('xrp_wallet (' + xrp_wallet_adress + '): ' + balance);
+					adapter.setState('wallet.xrp', {val: balance, ack: true});
+				} else {
+					adapter.log.error(error);
+				}
+			});
+		}
+	}
+	
 	
 	setTimeout(function () {
 		adapter.stop();

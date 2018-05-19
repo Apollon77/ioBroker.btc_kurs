@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.2.0",
+        "version": "0.2.1",
         "news": {
+			"0.2.1": {
+				"en": "add wallet - LTC, BCH and XRP",
+				"de": "Wallet Abfrage für LTC, BCH und XRP hinzugefügt"
+			},
 			"0.2.0": {
 				"en": "add wallet - BTC and ETH",
 				"de": "Wallet Abfrage für BTC und ETH hinzugefügt"

@@ -1,7 +1,7 @@
 {
   "name": "iobroker.btc_kurs",
-  "version": "0.2.0",
-  "description": "ioBroker btc_kurs Adapter",
+  "version": "0.2.1",
+  "description": "This adapter reads the USD current exchange rates of various cryptocurrencies and makes them available to the ioBroker. In addition, the wallet can be queried",
   "author": {
     "name": "Andreas Mueller",
     "email": "heindeep15@googlemail.com"

@@ -43,6 +43,9 @@
     function showHideSettings() {
 		$('#btc_wallet_adress').hide();
 		$('#eth_wallet_adress').hide();
+		$('#ltc_wallet_adress').hide();
+		$('#bch_wallet_adress').hide();
+		$('#xrp_wallet_adress').hide();
 		if ($('#btc_wallet').prop('checked')) {
             $('#btc_wallet_adress').show();
         } else {
@@ -53,12 +56,30 @@
         } else {
             $('#eth_wallet_adress').hide();
         }
+		if ($('#ltc_wallet').prop('checked')) {
+            $('#ltc_wallet_adress').show();
+        } else {
+            $('#ltc_wallet_adress').hide();
+        }
+		if ($('#bch_wallet').prop('checked')) {
+            $('#bch_wallet_adress').show();
+        } else {
+            $('#bch_wallet_adress').hide();
+        }
+		if ($('#xrp_wallet').prop('checked')) {
+            $('#xrp_wallet_adress').show();
+        } else {
+            $('#xrp_wallet_adress').hide();
+        }
     }
 	
     function init() {
         showHideSettings();
         $('#btc_wallet').on('change', showHideSettings);
 		$('#eth_wallet').on('change', showHideSettings);
+		$('#ltc_wallet').on('change', showHideSettings);
+		$('#bch_wallet').on('change', showHideSettings);
+		$('#xrp_wallet').on('change', showHideSettings);
     }
 
 	// the function loadSettings has to exist ...
@@ -182,26 +203,56 @@
                 </div>
  			</div>
             <div class="row">
-				<div class="input-field col s12 m12">
+				<div class="input-field col s12 m2">
 					<input id="btc_wallet" type="checkbox" class="value" />
 					<span for="btc_wallet">Bitcoin Wallet</span>
 				</div>
-				<div class="input-field col s12 m6 l4" id="btc_wallet_adress">
+				<div class="input-field col s12 m4 l0" id="btc_wallet_adress">
 					<input class="value" id="btc_wallet_adress" size="35" maxlength="35" type="text"/>
 					<label class="translate" for="btc_wallet_adress">Wallet adress</label>
 				</div>
 			</div>
             <div class="row">
-				<div class="input-field col s12 m12">
+				<div class="input-field col s12 m2">
 					<input id="eth_wallet" type="checkbox" class="value" />
 					<span for="eth_wallet">Ethereum Wallet</span>
 				</div>
-				<div class="input-field col s12 m6 l4" id="eth_wallet_adress">
+				<div class="input-field col s12 m4 l0" id="eth_wallet_adress">
 					<input class="value" id="eth_wallet_adress" size="50" maxlength="50" type="text"/>
 					<label class="translate" for="eth_wallet_adress">Wallet adress</label>
 				</div>
 			</div>
-        </div>
+            <div class="row">
+				<div class="input-field col s12 m2">
+					<input id="ltc_wallet" type="checkbox" class="value" />
+					<span for="ltc_wallet">Litecoin Wallet</span>
+				</div>
+				<div class="input-field col s12 m4 l0" id="ltc_wallet_adress">
+					<input class="value" id="ltc_wallet_adress" size="50" maxlength="50" type="text"/>
+					<label class="translate" for="ltc_wallet_adress">Wallet adress</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12 m2">
+					<input id="bch_wallet" type="checkbox" class="value" />
+					<span for="bch_wallet">Bitcoin Cash Wallet</span>
+				</div>
+				<div class="input-field col s12 m4 l0" id="bch_wallet_adress">
+					<input class="value" id="bch_wallet_adress" size="50" maxlength="50" type="text"/>
+					<label class="translate" for="bch_wallet_adress">Wallet adress</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12 m2">
+					<input id="xrp_wallet" type="checkbox" class="value" />
+					<span for="xrp_wallet">Ripple Wallet</span>
+				</div>
+				<div class="input-field col s12 m4 l0" id="xrp_wallet_adress">
+					<input class="value" id="xrp_wallet_adress" size="50" maxlength="50" type="text"/>
+					<label class="translate" for="xrp_wallet_adress">Wallet adress</label>
+				</div>
+			</div>
+		</div>
     </div>
 </div>			
 </body>
