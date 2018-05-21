@@ -29,6 +29,9 @@ Zusätzlich kann die Wallet abgefragt werden.
 		
 ## Changelog
 
+### 0.2.4
+* (HeinDeep) add test environment
+
 ### 0.2.3
 * (HeinDeep) add multilanguage
 
