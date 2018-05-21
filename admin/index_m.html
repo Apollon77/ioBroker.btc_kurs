@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../../js/translate.js"></script>
 <script type="text/javascript" src="../../lib/js/materialize.js"></script>
 <script type="text/javascript" src="../../js/adapter-settings.js"></script>
+<script type="text/javascript" src="words.js"></script>
 
  <style>
 	.m .col .select-wrapper+label {
@@ -22,24 +23,6 @@
  </style>
 <!-- you have to define 2 functions in the global scope: -->
 <script type="text/javascript">
-	systemDictionary = {
-		"Cryptocurrency": {
-			"en": "Cryptocurrency",
-			"de": "Kryptowährung",
-		},
-		"Crypto Exchange": {
-			"en": "Exchange",
-			"de": "Börse",
-		},
-		"Select Cryptocurrency": {
-			"en": "Select Cryptocurrency",
-			"de": "Kryptowährung auswählen",
-		},
-		"Wallet adress": {
-			"en": "Wallet adress",
-			"de": "Wallet Adresse",
-		}
-	};
     function showHideSettings() {
 		$('#btc_wallet_adress').hide();
 		$('#eth_wallet_adress').hide();
@@ -192,7 +175,7 @@
                     <select class="value" id="exchange">
                         <option value="bitfinex">Bitfinex</option>
                     </select>
-					<label for="exchange" class="translate">Crypto Exchange</label>
+					<label for="exchange" class="translate">Exchange</label>
                 </div>
             </div>			
         </div>
