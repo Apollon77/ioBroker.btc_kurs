@@ -29,6 +29,9 @@ In addition, the private wallet address can be queried and also made available.
 		
 ## Changelog
 
+### 0.2.3
+* (HeinDeep) add multilanguage
+
 ### 0.2.2
 * (HeinDeep) add english description
 

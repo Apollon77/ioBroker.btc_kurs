@@ -29,6 +29,9 @@ Zusätzlich kann die Wallet abgefragt werden.
 		
 ## Changelog
 
+### 0.2.3
+* (HeinDeep) add multilanguage
+
 ### 0.2.2
 * (HeinDeep) add english description
 

@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.2.2",
+        "version": "0.2.3",
         "news": {
+			"0.2.3": {
+				"en": "add multilanguage",
+				"de": "Multilanguage hinzugefügt"
+			},
 			"0.2.2": {
 				"en": "add english description",
 				"de": "Englische Beschreibung hinzugefügt"
