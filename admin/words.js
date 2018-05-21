@@ -8,9 +8,9 @@ systemDictionary = {
 		"de": "Kryptowährung",
 		"ru": "криптовалюта",
 		"pt": "Criptomoeda",
-		"nl": "cryptogeld",
+		"nl": "Cryptogeld",
 		"fr": "Crypto-monnaie",
-		"it": "criptovaluta",
+		"it": "Criptovaluta",
 		"es": "Criptomoneda",
 		"pl": "Kryptowaluta"
 	},

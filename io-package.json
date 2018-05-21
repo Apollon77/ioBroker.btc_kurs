@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.2.4",
+        "version": "0.2.5",
         "news": {
+			"0.2.5": {
+				"en": "add multilanguage description",
+				"de": "Multilanguage Beschreibung hinzugefügt"
+			},
 			"0.2.4": {
 				"en": "add test environment",
 				"de": "Test Umgebung hinzugefügt"
@@ -47,11 +51,25 @@
 		"title": "BTC Kurs Adapter",
         "titleLang": {
             "en": "Cryptocurrency exchange rate",
-            "de": "Kryptowährung Wechselkurs"
+            "de": "Kryptowährung Wechselkurs",
+			"fr": "Taux de change de crypto-monnaie",
+			"es": "Tasa de cambio de criptomonedas",
+			"it": "Tasso di cambio di criptovaluta",
+			"nl": "Cryptocurrency wisselkoers",
+			"pl": "Kurs wymiany kryptowalut",
+			"pt": "Taxa de câmbio de criptomoeda",
+			"ru": "Обменный курс криптовалюты"
         },
         "desc": {
             "en": "This adapter reads the USD current exchange rates of various cryptocurrencies and makes them available to the ioBroker. In addition, the private wallet address can be queried and also made available.",
-            "de": "Dieser Adpater liest die aktuellen USD-Wechselkurse verschiedener Kryptowährungen und stellt sie dem ioBroker zur Verfügung. Zusätzlich kann die Wallet abgefragt werden."
+            "de": "Dieser Adpater liest die aktuellen USD-Wechselkurse verschiedener Kryptowährungen und stellt sie dem ioBroker zur Verfügung. Zusätzlich kann die Wallet abgefragt werden.",
+			"fr": "Cet adpater lit les taux de change actuels de diverses cryptocurrences et les met à la disposition de l'ioBroker. En outre, le portefeuille peut être interrogé.",
+			"es": "Este adpater lee las tasas actuales de cambio de USD de varias criptomonedas y las pone a disposición de ioBroker. Además, la billetera puede ser consultada.",
+			"it": "Questo advisor legge gli attuali tassi di cambio dell'USD di varie criptovalute e li rende disponibili a ioBroker. Inoltre, il portafoglio può essere interrogato.",
+			"nl": "Deze adpater leest de huidige wisselkoersen van de USD van verschillende cryptocurrencies en maakt deze beschikbaar voor de ioBroker. Bovendien kan de portefeuille worden opgevraagd.",
+			"pl": "Ten adpater odczytuje aktualne kursy wymiany USD różnych kryptowalut i udostępnia je w programie ioBroker. Ponadto można zapytać o portfel.",
+			"pt": "Este adpater lê as taxas de câmbio atuais do USD de várias moedas criptografadas e as disponibiliza para o ioBroker. Além disso, a carteira pode ser consultada.",
+			"ru": "Этот adpater читает текущие курсы доллара США по различным криптовым валютам и делает их доступными для ioBroker. Кроме того, можно запросить кошелек."
         },
         "authors": [
             "Andreas Mueller <heindeep15@googlemail.com>"
