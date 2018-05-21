@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.2.3",
+        "version": "0.2.4",
         "news": {
+			"0.2.4": {
+				"en": "add test environment",
+				"de": "Test Umgebung hinzugefügt"
+			},
 			"0.2.3": {
 				"en": "add multilanguage",
 				"de": "Multilanguage hinzugefügt"
