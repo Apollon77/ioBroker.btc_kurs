@@ -7,9 +7,10 @@
 
 [![NPM](https://nodei.co/npm/iobroker.btc_kurs.png?downloads=true)](https://nodei.co/npm/iobroker.btc_kurs/)
 
-### Holt die aktuellen USD - Kurse von verschiedenen Kryptowährungen und stellt sie dem ioBroker zur Verfügung. Zusätzlich kann die Wallet abgefragt werden.
+This adapter reads the USD current exchange rates of various cryptocurrencies and makes them available to the ioBroker.
+In addition, the private wallet address can be queried and also made available.
 
-###	Unterstuetzte Waehrungen:
+###	Supported cryptocurrencies:
 	
 		- Bitcoin (BTC)
 		- Ethereum (ETH)
@@ -22,7 +23,7 @@
 		- NEO (NEO)
 		- Monero (XMR)
 	
-###	Unterstuetzte Exchange:
+###	Supported exchange:
   
 		- Bitfinex
 		
