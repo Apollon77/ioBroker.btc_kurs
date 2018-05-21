@@ -4,6 +4,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/iobroker.btc_kurs.svg)](https://www.npmjs.com/package/iobroker.btc_kurs)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.btc_kurs.svg)](https://www.npmjs.com/package/iobroker.btc_kurs)
+[![Tests](https://travis-ci.org/heindeep/ioBroker.btc_kurs.svg?branch=master)](https://travis-ci.org/heindeep/ioBroker.btc_kurs)
 
 [![NPM](https://nodei.co/npm/iobroker.btc_kurs.png?downloads=true)](https://nodei.co/npm/iobroker.btc_kurs/)
 
