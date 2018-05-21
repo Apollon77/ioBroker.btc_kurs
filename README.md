@@ -7,7 +7,7 @@
 [![Tests](https://travis-ci.org/heindeep/ioBroker.btc_kurs.svg?branch=master)](https://travis-ci.org/heindeep/ioBroker.btc_kurs)
 
 **Test:** Linux/Mac: 	[![Travis-CI](http://img.shields.io/travis/heindeep/ioBroker.btc_kurs/master.svg)](https://travis-ci.org/heindeep/ioBroker.btc_kurs)
-**Test:** Windows: 		[![AppVeyor](https://ci.appveyor.com/api/projects/status/github/heindeep/ioBroker.btc_kurs?branch=master&svg=true)](https://ci.appveyor.com/project/heindeep/ioBroker-btc_kurs/)
+**Test:** Windows: 		[![AppVeyor](https://ci.appveyor.com/api/projects/status/github/heindeep/ioBroker.btc_kurs?branch=master&svg=true)](https://ci.appveyor.com/project/heindeep/ioBroker.btc_kurs/)
 
 [![NPM](https://nodei.co/npm/iobroker.btc_kurs.png?downloads=true)](https://nodei.co/npm/iobroker.btc_kurs/)
 
