@@ -29,6 +29,9 @@ In addition, the private wallet address can be queried and also made available.
 		
 ## Changelog
 
+### 0.2.2
+* (HeinDeep) add english description
+
 ### 0.2.1
 * (HeinDeep) first release
 * (HeinDeep) add wallet - LTC, BCH and XRP
