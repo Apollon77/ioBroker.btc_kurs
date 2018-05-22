@@ -38,6 +38,9 @@ Zusätzlich kann die Wallet abgefragt werden.
 		
 ## Changelog
 
+### 0.2.9
+* (HeinDeep) fix npm
+
 ### 0.2.8
 * (HeinDeep) fix readme
 

@@ -38,6 +38,9 @@ In addition, the private wallet address can be queried and also made available.
 		
 ## Changelog
 
+### 0.2.9
+* (HeinDeep) fix npm
+
 ### 0.2.8
 * (HeinDeep) fix readme
 
