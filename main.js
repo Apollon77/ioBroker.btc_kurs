@@ -32,10 +32,10 @@ function number_format( number, length, sep, th_sep ) {
 	return arr_int[0]+sep+arr_int[1];
 }
 
-function call_market_price(cryptoname, exchange, currency, url) {
+function call_market_price(cryptoname, exchange, currency, url, partition) {
 	request(
 		{
-			url: url + cryptoname + currency,
+			url: url + cryptoname + partition + currency,
 			json: true
 		}, 
 		function(error, response, content) {
@@ -44,7 +44,12 @@ function call_market_price(cryptoname, exchange, currency, url) {
 				var json = JSON.stringify(data);
 				var jsonoutput = JSON.parse(JSON.stringify(json));
 				var output = eval("(function(){return " + jsonoutput + ";})()");
-				var ticker = parseFloat(output.last_price);
+				if (exchange == 'bitfinex') {
+					var ticker = parseFloat(output.last_price);
+				}
+				if (exchange == 'okex') {
+					var ticker = parseFloat(output.ticker.last);
+				}
 				ticker = number_format(ticker,2,'.','');
 				adapter.setObject('ticker.' + exchange + '.' + cryptoname, {
 					type: 'state',
@@ -55,7 +60,7 @@ function call_market_price(cryptoname, exchange, currency, url) {
 					},
 					native: {}
 				});
-				adapter.log.info(cryptoname + '_' + exchange + ': ' + ticker);	
+				//adapter.log.info(cryptoname + '_' + exchange + ': ' + ticker);	
 				adapter.setState('ticker.' + exchange + '.' + cryptoname, {val: ticker, ack: true});
 			} else {
 				adapter.log.error(error);
@@ -108,7 +113,7 @@ function call_wallet(cryptoname, wallet_adress, url, divide, jsonformat, urlsuff
 				},
 				native: {}
 			});
-			adapter.log.info(cryptoname + '_wallet (' + wallet_adress + '): ' + balance);
+			//adapter.log.info(cryptoname + '_wallet (' + wallet_adress + '): ' + balance);
 			adapter.setState('wallet.' + cryptoname, {val: balance, ack: true});
 		} else {
 			adapter.log.error(error);
@@ -121,43 +126,84 @@ function main() {
 	if (adapter.config.bitfinex == true) {
 		var url = "https://api.bitfinex.com/v1/pubticker/";
 		if (adapter.config.btc_bitfinex == true) {
-			call_market_price( 'btc', 'bitfinex', 'usd', url);
+			call_market_price( 'btc', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.eth_bitfinex == true) {
-			call_market_price( 'eth', 'bitfinex', 'usd', url);
+			call_market_price( 'eth', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.ltc_bitfinex == true) {
-			call_market_price( 'ltc', 'bitfinex', 'usd', url);
+			call_market_price( 'ltc', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.bch_bitfinex == true) {
-			call_market_price( 'bch', 'bitfinex', 'usd', url);
+			call_market_price( 'bch', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.xrp_bitfinex == true) {
-			call_market_price( 'xrp', 'bitfinex', 'usd', url);
+			call_market_price( 'xrp', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.eos_bitfinex == true) {
-			call_market_price( 'eos', 'bitfinex', 'usd', url);
+			call_market_price( 'eos', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.xlm_bitfinex == true) {
-			call_market_price( 'xlm', 'bitfinex', 'usd', url);
+			call_market_price( 'xlm', 'bitfinex', 'usd', url, '');
 		}
-		if (adapter.config.miota_bitfinex == true) {
-			call_market_price( 'iot', 'bitfinex', 'usd', url);
+		if (adapter.config.iota_bitfinex == true) {
+			call_market_price( 'iot', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.neo_bitfinex == true) {
-			call_market_price( 'neo', 'bitfinex', 'usd', url);
+			call_market_price( 'neo', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.xmr_bitfinex == true) {
-			call_market_price( 'xmr', 'bitfinex', 'usd', url);
+			call_market_price( 'xmr', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.dsh_bitfinex == true) {
-			call_market_price( 'dsh', 'bitfinex', 'usd', url);
+			call_market_price( 'dsh', 'bitfinex', 'usd', url, '');
 		}
 		if (adapter.config.etc_bitfinex == true) {
-			call_market_price( 'etc', 'bitfinex', 'usd', url);
+			call_market_price( 'etc', 'bitfinex', 'usd', url, '');
 		}
 	}
 
+	if (adapter.config.okex == true) {
+		var url = "https://www.okex.com/api/v1/ticker.do?symbol=";
+		if (adapter.config.btc_okex == true) {
+			call_market_price( 'btc', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.eth_okex == true) {
+			call_market_price( 'eth', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.ltc_okex == true) {
+			call_market_price( 'ltc', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.bch_okex == true) {
+			call_market_price( 'bch', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.xrp_okex == true) {
+			call_market_price( 'xrp', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.eos_okex == true) {
+			call_market_price( 'eos', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.true_okex == true) {
+			call_market_price( 'true', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.trx_okex == true) {
+			call_market_price( 'trx', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.etc_okex == true) {
+			call_market_price( 'etc', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.ont_okex == true) {
+			call_market_price( 'ont', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.qtum_okex == true) {
+			call_market_price( 'qtum', 'okex', 'usdt', url, '_');
+		}
+		if (adapter.config.iota_okex == true) {
+			call_market_price( 'iota', 'okex', 'usdt', url, '_');
+		}
+	}	
+
+	
 	// Wallet
 	if (adapter.config.btc_wallet == true) {
 		if (adapter.config.btc_wallet_adress != null) {

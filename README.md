@@ -25,12 +25,20 @@ In addition, the private wallet address can be queried and also made available.
 		- Monero (XMR)
 		- Dash (DASH)
 		- Ethereum Classic (ETC)
+		- True Chain (TRUE)
+		- Tron (TRX)
+		- Onology (ONT)
+		- Qtum (QTUM)
 	
 ###	Supported exchange:
   
 		- Bitfinex
+		- OKEx
 		
 ## Changelog
+
+### 0.2.7
+* (HeinDeep) add True Chain (TRUE), Tron (TRX), Onology (ONT), Qtum (QTUM) and add exchange OKEx
 
 ### 0.2.6
 * (HeinDeep) add Dash (DASH), Ethererum Classic (ETC)

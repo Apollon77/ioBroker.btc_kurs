@@ -36,10 +36,23 @@
 		$('#xrp__bitfinex').hide();
 		$('#eos_bitfinex').hide();
 		$('#xlm__bitfinex').hide();
-		$('#miota_bitfinex').hide();
+		$('#iota_bitfinex').hide();
 		$('#neo_bitfinex').hide();
 		$('#xmr_bitfinex').hide();
-		$('#dash_bitfinex').hide();
+		$('#dsh_bitfinex').hide();
+		$('#etc_bitfinex').hide();
+		$('#btc_okex').hide();
+		$('#eth_okex').hide();
+		$('#ltc_okex').hide();
+		$('#bch_okex').hide();
+		$('#xrp_okex').hide();
+		$('#eos_okex').hide();
+		$('#true_okex').hide();
+		$('#iota_okex').hide();
+		$('#trx_okex').hide();
+		$('#ont_okex').hide();
+		$('#qtum_okex').hide();
+		$('#etc_okex').hide();
 		
 		// TAB TICKER
 		if ($('#bitfinex').prop('checked')) {
@@ -50,10 +63,11 @@
 			$('#xrp_bitfinex').show();
 			$('#eos_bitfinex').show();
 			$('#xlm_bitfinex').show();
-			$('#miota_bitfinex').show();
+			$('#iota_bitfinex').show();
 			$('#neo_bitfinex').show();
 			$('#xmr_bitfinex').show();
-			$('#dash_bitfinex').show();
+			$('#dsh_bitfinex').show();
+			$('#etc_bitfinex').show();
         } else {
             $('#btc_bitfinex').hide();
 			$('#eth_bitfinex').hide();
@@ -62,10 +76,38 @@
 			$('#xrp_bitfinex').hide();
 			$('#eos_bitfinex').hide();
 			$('#xlm_bitfinex').hide();
-			$('#miota_bitfinex').hide();
+			$('#iota_bitfinex').hide();
 			$('#neo_bitfinex').hide();
 			$('#xmr_bitfinex').hide();
-			$('#dash_bitfinex').hide();
+			$('#dsh_bitfinex').hide();
+			$('#etc_bitfinex').hide();
+        }
+		if ($('#okex').prop('checked')) {
+            $('#btc_okex').show();
+			$('#eth_okex').show();
+			$('#ltc_okex').show();
+			$('#bch_okex').show();
+			$('#xrp_okex').show();
+			$('#eos_okex').show();
+			$('#true_okex').show();
+			$('#iota_okex').show();
+			$('#trx_okex').show();
+			$('#ont_okex').show();
+			$('#qtum_okex').show();
+			$('#etc_okex').show();
+        } else {
+			$('#btc_okex').hide();
+			$('#eth_okex').hide();
+			$('#ltc_okex').hide();
+			$('#bch_okex').hide();
+			$('#xrp_okex').hide();
+			$('#eos_okex').hide();
+			$('#true_okex').hide();
+			$('#iota_okex').hide();
+			$('#trx_okex').hide();
+			$('#ont_okex').hide();
+			$('#qtum_okex').hide();
+			$('#etc_okex').hide();
         }
 		
 		// TAB WALLET
@@ -104,6 +146,7 @@
 		$('#bch_wallet').on('change', showHideSettings);
 		$('#xrp_wallet').on('change', showHideSettings);
 		$('#bitfinex').on('change', showHideSettings);
+		$('#okex').on('change', showHideSettings);
     }
 
 	// the function loadSettings has to exist ...
@@ -165,11 +208,13 @@
                 </div>
  			</div>
 			<div class="row">
-				<div class="input-field col s12 m2">
-					<input id="bitfinex" type="checkbox" class="value" />
-					<span for="bitfinex">Bitfinex</span>
-				</div>
-			</div>
+                <div class="col s12">
+                    <h6 class="translate title">
+						<input id="bitfinex" type="checkbox" class="value" />
+						<span for="bitfinex">Bitfinex</span>
+					</h6>
+                </div>
+            </div>
 			<div class="row">
 				<div class="input-field col s12 m2 10" id="btc_bitfinex">
                     <input class="value" id="btc_bitfinex" type="checkbox" />
@@ -181,7 +226,7 @@
                 </div>
 				<div class="input-field col s12 m2 l0" id="ltc_bitfinex">
                     <input class="value" id="ltc_bitfinex" type="checkbox" />
-                    <label class="translate" for="ltc_bitfinex">Litcoin (ETH)</label>
+                    <label class="translate" for="ltc_bitfinex">Litcoin (LTC)</label>
                 </div>
 				<div class="input-field col s12 m2 l0" id="bch_bitfinex">
                     <input class="value" id="bch_bitfinex" type="checkbox" />
@@ -199,9 +244,9 @@
                     <input class="value" id="xlm_bitfinex" type="checkbox" />
                     <label class="translate" for="xlm_bitfinex">Stellar (XLM)</label>
                 </div>
-				<div class="input-field col s12 m2 l0" id="miota_bitfinex">
-                    <input class="value" id="miota_bitfinex" type="checkbox" />
-                    <label class="translate" for="miota_bitfinex">IOTA (IOT)</label>
+				<div class="input-field col s12 m2 l0" id="iota_bitfinex">
+                    <input class="value" id="iota_bitfinex" type="checkbox" />
+                    <label class="translate" for="iota_bitfinex">IOTA (IOTA)</label>
                 </div>
 				<div class="input-field col s12 m2 l0" id="neo_bitfinex">
                     <input class="value" id="neo_bitfinex" type="checkbox" />
@@ -220,6 +265,66 @@
                     <label class="translate" for="etc_bitfinex">Ethereum Classic (ETC)</label>
                 </div>				
             </div>			
+			
+			
+			<div class="row">
+                <div class="col s12">
+                    <h6 class="translate title">
+						<input id="okex" type="checkbox" class="value" />
+						<span for="okex">OKEx</span>
+					</h6>
+                </div>
+            </div>
+			<div class="row">
+				<div class="input-field col s12 m2 10" id="btc_okex">
+                    <input class="value" id="btc_okex" type="checkbox" />
+                    <label class="translate" for="btc_okex">Bitcoin (BTC)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="eth_okex">
+                    <input class="value" id="eth_okex" type="checkbox" />
+                    <label class="translate" for="eth_okex">Ethereum (ETH)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="ltc_okex">
+                    <input class="value" id="ltc_okex" type="checkbox" />
+                    <label class="translate" for="ltc_okex">Litcoin (LTC)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="bch_okex">
+                    <input class="value" id="bch_okex" type="checkbox" />
+                    <label class="translate" for="bch_okex">Bitcoin Cash (BCH)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="xrp_okex">
+                    <input class="value" id="xrp_okex" type="checkbox" />
+                    <label class="translate" for="xrp_okex">Ripple (XRP)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="eos_okex">
+                    <input class="value" id="eos_okex" type="checkbox" />
+                    <label class="translate" for="eos_okex">EOS (EOS))</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="true_okex">
+                    <input class="value" id="true_okex" type="checkbox" />
+                    <label class="translate" for="true_okex">True Chain (TRUE)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="iota_okex">
+                    <input class="value" id="iota_okex" type="checkbox" />
+                    <label class="translate" for="iota_okex">IOTA (IOTA)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="trx_okex">
+                    <input class="value" id="trx_okex" type="checkbox" />
+                    <label class="translate" for="trx_okex">Tron (TRX)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="ont_okex">
+                    <input class="value" id="ont_okex" type="checkbox" />
+                    <label class="translate" for="ont_okex">Ontology (ONT)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="qtum_okex">
+                    <input class="value" id="qtum_okex" type="checkbox" />
+                    <label class="translate" for="qtum_okex">Qtum (QTUM)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="etc_okex">
+                    <input class="value" id="etc_okex" type="checkbox" />
+                    <label class="translate" for="etc_okex">Ethereum Classic (ETC)</label>
+                </div>
+			</div>			
         </div>
 		<div id="tab-wallet" class="col s12 page">
 			<div class="row">

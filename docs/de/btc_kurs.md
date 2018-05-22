@@ -25,12 +25,20 @@ Zusätzlich kann die Wallet abgefragt werden.
 		- Monero (XMR)
 		- Dash (DASH)
 		- Ethereum Classic (ETC)
+		- True Chain (TRUE)
+		- Tron (TRX)
+		- Onology (ONT)
+		- Qtum (QTUM)
 	
 ###	Unterstützte Börsen:
   
 		- Bitfinex
+		- OKEx
 		
 ## Changelog
+
+### 0.2.7
+* (HeinDeep) add True Chain (TRUE), Tron (TRX), Onology (ONT), Qtum (QTUM) and add exchange OKEx
 
 ### 0.2.6
 * (HeinDeep) add Dash (DASH), Ethererum Classic (ETC)

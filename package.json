@@ -1,6 +1,6 @@
 {
   "name": "iobroker.btc_kurs",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "This adapter reads the USD current exchange rates of various cryptocurrencies and makes them available to the ioBroker. In addition, the private wallet address can be queried and also made available.",
   "author": {
     "name": "Andreas Mueller",

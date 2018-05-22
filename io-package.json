@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.2.6",
+        "version": "0.2.7",
         "news": {
+			"0.2.7": {
+				"en": "add True Chain (TRUE), Tron (TRX), Onology (ONT), Qtum (QTUM) and add exchange OKEx",
+				"de": "True Chain (TRUE), Tron (TRX), Onology (ONT), Qtum (QTUM) hinzugefügt und Börse OKEx hinzugefügt"
+			},
 			"0.2.6": {
 				"en": "add Dash (DASH), Ethererum Classic (ETC)",
 				"de": "Dash (DASH), Ethererum Classic (ETC) hinzugefügt"
