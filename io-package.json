@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.2.5",
+        "version": "0.2.6",
         "news": {
+			"0.2.6": {
+				"en": "add Dash (DASH), Ethererum Classic (ETC)",
+				"de": "Dash (DASH), Ethererum Classic (ETC) hinzugefügt"
+			},
 			"0.2.5": {
 				"en": "add multilanguage description",
 				"de": "Multilanguage Beschreibung hinzugefügt"

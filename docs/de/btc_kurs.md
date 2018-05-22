@@ -23,12 +23,20 @@ Zusätzlich kann die Wallet abgefragt werden.
 		- IOTA (MIOTA)
 		- NEO (NEO)
 		- Monero (XMR)
+		- Dash (DASH)
+		- Ethereum Classic (ETC)
 	
 ###	Unterstützte Börsen:
   
 		- Bitfinex
 		
 ## Changelog
+
+### 0.2.6
+* (HeinDeep) add Dash (DASH), Ethererum Classic (ETC)
+
+### 0.2.5
+* (HeinDeep) add multilanguage description
 
 ### 0.2.4
 * (HeinDeep) add test environment

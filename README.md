@@ -23,12 +23,20 @@ In addition, the private wallet address can be queried and also made available.
 		- IOTA (MIOTA)
 		- NEO (NEO)
 		- Monero (XMR)
+		- Dash (DASH)
+		- Ethereum Classic (ETC)
 	
 ###	Supported exchange:
   
 		- Bitfinex
 		
 ## Changelog
+
+### 0.2.6
+* (HeinDeep) add Dash (DASH), Ethererum Classic (ETC)
+
+### 0.2.5
+* (HeinDeep) add multilanguage description
 
 ### 0.2.4
 * (HeinDeep) add test environment

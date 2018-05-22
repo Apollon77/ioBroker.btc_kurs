@@ -29,6 +29,46 @@
 		$('#ltc_wallet_adress').hide();
 		$('#bch_wallet_adress').hide();
 		$('#xrp_wallet_adress').hide();
+		$('#btc_bitfinex').hide();
+		$('#eth_bitfinex').hide();
+		$('#ltc__bitfinex').hide();
+		$('#bch_bitfinex').hide();
+		$('#xrp__bitfinex').hide();
+		$('#eos_bitfinex').hide();
+		$('#xlm__bitfinex').hide();
+		$('#miota_bitfinex').hide();
+		$('#neo_bitfinex').hide();
+		$('#xmr_bitfinex').hide();
+		$('#dash_bitfinex').hide();
+		
+		// TAB TICKER
+		if ($('#bitfinex').prop('checked')) {
+            $('#btc_bitfinex').show();
+			$('#eth_bitfinex').show();
+			$('#ltc_bitfinex').show();
+			$('#bch_bitfinex').show();
+			$('#xrp_bitfinex').show();
+			$('#eos_bitfinex').show();
+			$('#xlm_bitfinex').show();
+			$('#miota_bitfinex').show();
+			$('#neo_bitfinex').show();
+			$('#xmr_bitfinex').show();
+			$('#dash_bitfinex').show();
+        } else {
+            $('#btc_bitfinex').hide();
+			$('#eth_bitfinex').hide();
+			$('#ltc_bitfinex').hide();
+			$('#bch_bitfinex').hide();
+			$('#xrp_bitfinex').hide();
+			$('#eos_bitfinex').hide();
+			$('#xlm_bitfinex').hide();
+			$('#miota_bitfinex').hide();
+			$('#neo_bitfinex').hide();
+			$('#xmr_bitfinex').hide();
+			$('#dash_bitfinex').hide();
+        }
+		
+		// TAB WALLET
 		if ($('#btc_wallet').prop('checked')) {
             $('#btc_wallet_adress').show();
         } else {
@@ -63,6 +103,7 @@
 		$('#ltc_wallet').on('change', showHideSettings);
 		$('#bch_wallet').on('change', showHideSettings);
 		$('#xrp_wallet').on('change', showHideSettings);
+		$('#bitfinex').on('change', showHideSettings);
     }
 
 	// the function loadSettings has to exist ...
@@ -123,60 +164,61 @@
 					<img src="btc_kurs.png" class="logo">
                 </div>
  			</div>
-             <div class="row">
-                <div class="col s12 m12 l12">
-					<div class="translate" style="margin: 0px">Select Cryptocurrency</div>
+			<div class="row">
+				<div class="input-field col s12 m2">
+					<input id="bitfinex" type="checkbox" class="value" />
+					<span for="bitfinex">Bitfinex</span>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col s12 m12 l12">
-                    <input class="value" id="btc" type="checkbox" />
-                    <label>Bitcoin (BTC)</label>
+				<div class="input-field col s12 m2 10" id="btc_bitfinex">
+                    <input class="value" id="btc_bitfinex" type="checkbox" />
+                    <label class="translate" for="btc_bitfinex">Bitcoin (BTC)</label>
                 </div>
-                <div class="col s12 m12 l12">
-                    <input class="value" id="eth" type="checkbox" />
-                    <label>Ethereum (ETH)</label>
+				<div class="input-field col s12 m2 10" id="eth_bitfinex">
+                    <input class="value" id="eth_bitfinex" type="checkbox" />
+                    <label class="translate" for="eth_bitfinex">Ethereum (ETH)</label>
                 </div>
-                <div class="col s12 m12 l12">
-                    <input class="value" id="ltc" type="checkbox" />
-                    <label>Litecoin (LTC)</label>
+				<div class="input-field col s12 m2 l0" id="ltc_bitfinex">
+                    <input class="value" id="ltc_bitfinex" type="checkbox" />
+                    <label class="translate" for="ltc_bitfinex">Litcoin (ETH)</label>
                 </div>
-                <div class="col s12 m12 l12">
-                    <input class="value" id="bch" type="checkbox" />
-                    <label>Bitcoin Cash (BCH)</label>
+				<div class="input-field col s12 m2 l0" id="bch_bitfinex">
+                    <input class="value" id="bch_bitfinex" type="checkbox" />
+                    <label class="translate" for="bch_bitfinex">Bitcoin Cash (BCH)</label>
                 </div>
-                <div class="col s12 m12 l12">
-                    <input class="value" id="xrp" type="checkbox" />
-                    <label>Ripple (XRP)</label>
+				<div class="input-field col s12 m2 l0" id="xrp_bitfinex">
+                    <input class="value" id="xrp_bitfinex" type="checkbox" />
+                    <label class="translate" for="xrp_bitfinex">Ripple (XRP)</label>
                 </div>
-                <div class="col s12 m12 l12">
-                    <input class="value" id="eos" type="checkbox" />
-                    <label>EOS (EOS)</label>
+				<div class="input-field col s12 m2 l0" id="eos_bitfinex">
+                    <input class="value" id="eos_bitfinex" type="checkbox" />
+                    <label class="translate" for="eos_bitfinex">EOS (EOS)</label>
                 </div>
-                <div class="col s12 m12 l12">
-                    <input class="value" id="xlm" type="checkbox" />
-                    <label>Stellar (XLM)</label>
+				<div class="input-field col s12 m2 l0" id="xlm_bitfinex">
+                    <input class="value" id="xlm_bitfinex" type="checkbox" />
+                    <label class="translate" for="xlm_bitfinex">Stellar (XLM)</label>
                 </div>
-                <div class="col s12 m12 l12">
-                    <input class="value" id="iot" type="checkbox" />
-                    <label>IOTA (MIOTA)</label>
+				<div class="input-field col s12 m2 l0" id="miota_bitfinex">
+                    <input class="value" id="miota_bitfinex" type="checkbox" />
+                    <label class="translate" for="miota_bitfinex">IOTA (IOT)</label>
                 </div>
-                <div class="col s12 m12 l12">
-                    <input class="value" id="neo" type="checkbox" />
-                    <label class="translate" >NEO (NEO)</label>
+				<div class="input-field col s12 m2 l0" id="neo_bitfinex">
+                    <input class="value" id="neo_bitfinex" type="checkbox" />
+                    <label class="translate" for="neo_bitfinex">NEO (NEO)</label>
                 </div>
-                <div class="col s12 m12 l12">
-                    <input class="value" id="xmr" type="checkbox" />
-                    <label>Monero (XMR)</label>
+				<div class="input-field col s12 m2 l0" id="xmr_bitfinex">
+                    <input class="value" id="xmr_bitfinex" type="checkbox" />
+                    <label class="translate" for="xmr_bitfinex">Monero (XMR)</label>
                 </div>
-            </div>			
-            <div class="row">
-                <div class="input-field col s12 m3">
-                    <select class="value" id="exchange">
-                        <option value="bitfinex">Bitfinex</option>
-                    </select>
-					<label for="exchange" class="translate">Exchange</label>
-                </div>
+				<div class="input-field col s12 m2 l0" id="dsh_bitfinex">
+                    <input class="value" id="dsh_bitfinex" type="checkbox" />
+                    <label class="translate" for="dsh_bitfinex">Dash (DASH)</label>
+                </div>		
+				<div class="input-field col s12 m2 l0" id="etc_bitfinex">
+                    <input class="value" id="etc_bitfinex" type="checkbox" />
+                    <label class="translate" for="etc_bitfinex">Ethereum Classic (ETC)</label>
+                </div>				
             </div>			
         </div>
 		<div id="tab-wallet" class="col s12 page">
