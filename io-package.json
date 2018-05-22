@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.2.7",
+        "version": "0.2.8",
         "news": {
+			"0.2.8": {
+				"en": "fix readme",
+				"de": "Fehler in readme behoben"
+			},
 			"0.2.7": {
 				"en": "add True Chain (TRUE), Tron (TRX), Onology (ONT), Qtum (QTUM) and add exchange OKEx",
 				"de": "True Chain (TRUE), Tron (TRX), Onology (ONT), Qtum (QTUM) hinzugefügt und Börse OKEx hinzugefügt"

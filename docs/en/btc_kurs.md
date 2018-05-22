@@ -5,6 +5,7 @@
 [![NPM version](https://img.shields.io/npm/v/iobroker.btc_kurs.svg)](https://www.npmjs.com/package/iobroker.btc_kurs)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.btc_kurs.svg)](https://www.npmjs.com/package/iobroker.btc_kurs)
 [![Tests](https://travis-ci.org/heindeep/ioBroker.btc_kurs.svg?branch=master)](https://travis-ci.org/heindeep/ioBroker.btc_kurs)
+[![Build status](https://ci.appveyor.com/api/projects/status/w6p6oweh28sxm5ja?svg=true)](https://ci.appveyor.com/project/heindeep/iobroker-btc-kurs)
 
 [![NPM](https://nodei.co/npm/iobroker.btc_kurs.png?downloads=true)](https://nodei.co/npm/iobroker.btc_kurs/)
 
@@ -36,6 +37,9 @@ In addition, the private wallet address can be queried and also made available.
 		- OKEx
 		
 ## Changelog
+
+### 0.2.8
+* (HeinDeep) fix readme
 
 ### 0.2.7
 * (HeinDeep) add True Chain (TRUE), Tron (TRX), Onology (ONT), Qtum (QTUM) and add exchange OKEx

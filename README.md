@@ -38,6 +38,9 @@ In addition, the private wallet address can be queried and also made available.
 		
 ## Changelog
 
+### 0.2.8
+* (HeinDeep) fix readme
+
 ### 0.2.7
 * (HeinDeep) add True Chain (TRUE), Tron (TRX), Onology (ONT), Qtum (QTUM) and add exchange OKEx
 
