@@ -2,5 +2,6 @@
   "Cryptocurrency": "Criptomoneda",
   "Exchange": "Intercambiar",
   "Select Cryptocurrency": "Seleccione Criptomoneda",
-  "Wallet adress": "Dirección de billetera"
+  "Wallet adress": "Dirección de billetera",
+  "Wallet query on a stock exchange (API key required)": "Consulta de cartera en una bolsa (se requiere clave de API)"
 }

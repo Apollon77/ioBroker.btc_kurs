@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.3.0",
+        "version": "0.3.1",
         "news": {
+			"0.3.1": {
+				"en": "add Bitfinex Wallet query with API-Keys",
+				"de": "Wallet Abfrage mit API-Keys auf Bitfinex hinzugefügt"
+			},
 			"0.3.0": {
 				"en": "add Cardano (ADA), Binance Coin (BNB) and add exchange Binance",
 				"de": "Cardano (ADA), Binance Coin (BNB) hinzugefügt und Börse Binance hinzugefügt"

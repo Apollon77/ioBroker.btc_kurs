@@ -2,5 +2,6 @@
   "Cryptocurrency": "Cryptogeld",
   "Exchange": "Uitwisseling",
   "Select Cryptocurrency": "Selecteer Cryptocurrency",
-  "Wallet adress": "Wallet-adres"
+  "Wallet adress": "Wallet-adres",
+  "Wallet query on a stock exchange (API key required)": "Wallet-query op een beurs (API-sleutel vereist)"
 }

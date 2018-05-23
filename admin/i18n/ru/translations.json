@@ -2,5 +2,6 @@
   "Cryptocurrency": "криптовалюта",
   "Exchange": "обмен",
   "Select Cryptocurrency": "Выберите Cryptocurrency",
-  "Wallet adress": "Адрес кошелька"
+  "Wallet adress": "Адрес кошелька",
+  "Wallet query on a stock exchange (API key required)": "Запрос кошелька на фондовой бирже (требуется ключ API)"
 }

@@ -46,5 +46,16 @@ systemDictionary = {
 		"it": "Indirizzo del portafogli",
 		"es": "Dirección de billetera",
 		"pl": "Adres portfela"
-  }
+	},
+	"Wallet query on a stock exchange (API key required)": {
+		"en": "Wallet query on a stock exchange (API key required)",
+		"de": "Wallet Abfrage auf einer Börse (API-Key erdorderlich)",
+		"ru": "Запрос кошелька на фондовой бирже (требуется ключ API)",
+		"pt": "Consulta de carteira em bolsa de valores (requer chave de API)",
+		"nl": "Wallet-query op een beurs (API-sleutel vereist)",
+		"fr": "Requête Google Wallet sur une bourse (clé API requise)",
+		"it": "Query Wallet su una borsa (è richiesta una chiave API)",
+		"es": "Consulta de cartera en una bolsa (se requiere clave de API)",
+		"pl": "Kwerenda portfela na giełdzie (wymagany klucz API)"
+	}
 };

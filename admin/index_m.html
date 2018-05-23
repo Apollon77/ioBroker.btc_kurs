@@ -62,6 +62,8 @@
 		$('#neo_binance').hide();
 		$('#bnb_binance').hide();
 		$('#ada_binance').hide();
+		$('#bitfinex_exchange_api').hide();
+		$('#bitfinex_exchange_apisecret').hide();
 		
 		// TAB TICKER
 		if ($('#bitfinex').prop('checked')) {
@@ -166,8 +168,16 @@
         } else {
             $('#xrp_wallet_adress').hide();
         }
-    }
-	
+
+		// TAB EXCHANGE	
+		if ($('#bitfinex_exchange').prop('checked')) {
+            $('#bitfinex_exchange_api').show();
+			$('#bitfinex_exchange_apisecret').show();
+        } else {
+            $('#bitfinex_exchange_api').hide();
+			$('#bitfinex_exchange_apisecret').hide();
+        }
+    }	
     function init() {
         showHideSettings();
         $('#btc_wallet').on('change', showHideSettings);
@@ -178,6 +188,7 @@
 		$('#bitfinex').on('change', showHideSettings);
 		$('#okex').on('change', showHideSettings);
 		$('#binance').on('change', showHideSettings);
+		$('#bitfinex_exchange').on('change', showHideSettings);
     }
 
 	// the function loadSettings has to exist ...
@@ -230,6 +241,7 @@
             <ul class="tabs">
                 <li class="tab col s2"><a href="#tab-ticker" class="translate active">Ticker</a></li>
 				<li class="tab col s2 wallet-settings"><a href="#tab-wallet" class="translate">Wallet</a></li>
+				<li class="tab col s2 exchange-settings"><a href="#tab-exchange" class="translate">Exchange</a></li>
             </ul>
         </div>
 		<div id="tab-ticker" class="col s12 page">
@@ -460,6 +472,38 @@
 				</div>
 			</div>
 		</div>
+		
+		<div id="tab-exchange" class="col s12 page">
+			<div class="row">
+				<div class="input-field col s6">
+					<img src="btc_kurs.png" class="logo">
+                </div>
+ 			</div>
+			<div class="row">
+				<div class="input-field col s12 m4 l0">
+					<div class="translate" style="margin: 10px">Wallet query on a stock exchange (API key required)</div>
+				</div>
+			</div>
+			<div class="row">
+                <div class="col s12">
+                    <h6 class="translate title">
+						<input id="bitfinex_exchange" type="checkbox" class="value" />
+						<span for="bitfinex_exchange">Bitfinex</span>
+					</h6>
+                </div>
+            </div>
+			<div class="row">
+				<div class="input-field col s12 m4 l0" id="bitfinex_exchange_api">
+					<input class="value" id="bitfinex_exchange_api" size="43" maxlength="43" type="text"/>
+					<label class="translate" for="bitfinex_exchange_api">API Key</label>
+				</div>
+				<div class="input-field col s12 m4 l0" id="bitfinex_exchange_apisecret">
+					<input class="value" id="bitfinex_exchange_apisecret" size="43" maxlength="43" type="text"/>
+					<label class="translate" for="bitfinex_exchange_apisecret">API Secretkey</label>
+				</div>
+			</div>
+		</div>
+		
     </div>
 </div>			
 </body>

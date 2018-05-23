@@ -2,6 +2,7 @@
 
 var utils = require(__dirname + '/lib/utils');
 var request = require('request');
+var BFX = require('bitfinex-api-node');
 var adapter = new utils.Adapter('btc_kurs');
 
 adapter.on('ready', function () {
@@ -63,7 +64,7 @@ function call_market_price(cryptoname, exchange, currency, url, partition) {
 					},
 					native: {}
 				});
-				//adapter.log.info(cryptoname + '_' + exchange + ': ' + ticker);	
+				adapter.log.info(cryptoname + '_' + exchange + ': ' + ticker);	
 				adapter.setState('ticker.' + exchange + '.' + cryptoname, {val: ticker, ack: true});
 			} else {
 				adapter.log.error(error);
@@ -125,6 +126,36 @@ function call_wallet(cryptoname, wallet_adress, url, divide, jsonformat, urlsuff
 }
 
 function main() {
+
+	//exchange
+	if (adapter.config.bitfinex_exchange == true) {
+		const API_KEY = adapter.config.bitfinex_exchange_api;
+		const API_SECRET = adapter.config.bitfinex_exchange_apisecret;
+		var bfxRest = new BFX(API_KEY, API_SECRET, {version: 1}).rest;
+		bfxRest.wallet_balances((err, js) => {
+			//var js = JSON.parse(result);
+			for (var i in js) {
+				if (JSON.stringify(js[i].amount) != '"0.0"') {
+					var type = JSON.stringify(js[i].type).replace(/"/g, '');;
+					var currency = JSON.stringify(js[i].currency).replace(/"/g, '');;
+					var amount = JSON.stringify(js[i].amount).replace(/"/g, '');;
+
+					adapter.setObject('exchange.bitfinex.' + type + '_' + currency, {
+						type: 'state',
+						common: {
+							name: type + '_' + currency,
+							type: 'string',
+							role: 'variable'
+						},
+						native: {}
+					});
+					//adapter.log.info(type + ' - ' + currency + ' - ' + amount);
+					adapter.setState('exchange.bitfinex.' + type + '_' + currency, {val: amount, ack: true});
+				}
+			}
+		});
+	}
+	
 	// Ticker
 	if (adapter.config.bitfinex == true) {
 		var url = "https://api.bitfinex.com/v1/pubticker/";
@@ -206,7 +237,7 @@ function main() {
 		}
 	}	
 
-		if (adapter.config.binance == true) {
+	if (adapter.config.binance == true) {
 		var url = "https://api.binance.com/api/v3/ticker/price?symbol=";
 		if (adapter.config.btc_binance == true) {
 			call_market_price( 'BTC', 'binance', 'USDT', url, '');

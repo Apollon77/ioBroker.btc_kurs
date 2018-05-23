@@ -2,5 +2,6 @@
   "Cryptocurrency": "Kryptowaluta",
   "Exchange": "Wymieniać się",
   "Select Cryptocurrency": "Wybierz kryptowalutę",
-  "Wallet adress": "Adres portfela"
+  "Wallet adress": "Adres portfela",
+  "Wallet query on a stock exchange (API key required)": "Kwerenda portfela na giełdzie (wymagany klucz API)"
 }

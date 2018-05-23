@@ -2,5 +2,6 @@
   "Cryptocurrency": "Crypto-monnaie",
   "Exchange": "Échange",
   "Select Cryptocurrency": "Sélectionnez Crypto-monnaie",
-  "Wallet adress": "Adresse du portefeuille"
+  "Wallet adress": "Adresse du portefeuille",
+  "Wallet query on a stock exchange (API key required)": "Requête Google Wallet sur une bourse (clé API requise)"
 }

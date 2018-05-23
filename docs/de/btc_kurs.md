@@ -10,7 +10,7 @@
 [![NPM](https://nodei.co/npm/iobroker.btc_kurs.png?downloads=true)](https://nodei.co/npm/iobroker.btc_kurs/)
 
 Dieser Adpater liest die aktuellen USD-Wechselkurse verschiedener Kryptowährungen und stellt sie dem ioBroker zur Verfügung.
-Zusätzlich kann die Wallet abgefragt werden.
+Zusätzlich kann die Wallet und die Bitfinex Wallet (API-Key erforderlich) abgefragt werden.
 
 ###	Unterstützte Kryptowährungen:
 	
@@ -40,6 +40,9 @@ Zusätzlich kann die Wallet abgefragt werden.
 		- Binance
 		
 ## Changelog
+
+### 0.3.1
+* (HeinDeep) add Bitfinex Wallet query with API-Keys
 
 ### 0.3.0
 * (HeinDeep) add Cardano (ADA), Binance Coin (BNB) and add exchange Binance

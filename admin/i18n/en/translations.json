@@ -2,5 +2,6 @@
   "Cryptocurrency": "Cryptocurrency",
   "Exchange": "Exchange",
   "Select Cryptocurrency": "Select Cryptocurrency",
-  "Wallet adress": "Wallet adress"
+  "Wallet adress": "Wallet adress",
+  "Wallet query on a stock exchange (API key required)": "Wallet query on a stock exchange (API key required)"
 }

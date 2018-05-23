@@ -10,7 +10,7 @@
 [![NPM](https://nodei.co/npm/iobroker.btc_kurs.png?downloads=true)](https://nodei.co/npm/iobroker.btc_kurs/)
 
 This adapter reads the USD current exchange rates of various cryptocurrencies and makes them available to the ioBroker.
-In addition, the private wallet address can be queried and also made available.
+In addition, the Wallet and the Bitfinex Wallet (API key required) can be queried.
 
 ###	Supported cryptocurrencies:
 	
@@ -40,6 +40,9 @@ In addition, the private wallet address can be queried and also made available.
 		- Binance
 		
 ## Changelog
+
+### 0.3.1
+* (HeinDeep) add Bitfinex Wallet query with API-Keys
 
 ### 0.3.0
 * (HeinDeep) add Cardano (ADA), Binance Coin (BNB) and add exchange Binance
