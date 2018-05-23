@@ -64,7 +64,7 @@ function call_market_price(cryptoname, exchange, currency, url, partition) {
 					},
 					native: {}
 				});
-				adapter.log.info(cryptoname + '_' + exchange + ': ' + ticker);	
+				//adapter.log.info(cryptoname + '_' + exchange + ': ' + ticker);	
 				adapter.setState('ticker.' + exchange + '.' + cryptoname, {val: ticker, ack: true});
 			} else {
 				adapter.log.error(error);
@@ -133,7 +133,6 @@ function main() {
 		const API_SECRET = adapter.config.bitfinex_exchange_apisecret;
 		var bfxRest = new BFX(API_KEY, API_SECRET, {version: 1}).rest;
 		bfxRest.wallet_balances((err, js) => {
-			//var js = JSON.parse(result);
 			for (var i in js) {
 				if (JSON.stringify(js[i].amount) != '"0.0"') {
 					var type = JSON.stringify(js[i].type).replace(/"/g, '');;
