@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.3.1",
+        "version": "0.3.2",
         "news": {
+			"0.3.1": {
+				"en": "fix bug multiinstancen",
+				"de": "Fehler in Multiinstanzen behoben"
+			},
 			"0.3.1": {
 				"en": "add Bitfinex Wallet query with API-Keys",
 				"de": "Wallet Abfrage mit API-Keys auf Bitfinex hinzugefügt"

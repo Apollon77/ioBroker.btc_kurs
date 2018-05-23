@@ -41,6 +41,9 @@ Zusätzlich kann die Wallet und die Bitfinex Wallet (API-Key erforderlich) abgef
 		
 ## Changelog
 
+### 0.3.2
+* (HeinDeep) fix bug multiinstancen
+
 ### 0.3.1
 * (HeinDeep) add Bitfinex Wallet query with API-Keys
 

@@ -41,6 +41,9 @@ In addition, the Wallet and the Bitfinex Wallet (API key required) can be querie
 		
 ## Changelog
 
+### 0.3.2
+* (HeinDeep) fix bug multiinstancen
+
 ### 0.3.1
 * (HeinDeep) add Bitfinex Wallet query with API-Keys
 

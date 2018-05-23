@@ -6,7 +6,12 @@ var BFX = require('bitfinex-api-node');
 var adapter = new utils.Adapter('btc_kurs');
 
 adapter.on('ready', function () {
-    main();
+        adapter.log.debug('initializing objects');
+        main();
+        setTimeout(function () {
+            adapter.log.info('force terminating adapter after 1 minute');
+            adapter.stop();
+        }, 60000);
 });
 
 function number_format( number, length, sep, th_sep ) {
@@ -135,9 +140,9 @@ function main() {
 		bfxRest.wallet_balances((err, js) => {
 			for (var i in js) {
 				if (JSON.stringify(js[i].amount) != '"0.0"') {
-					var type = JSON.stringify(js[i].type).replace(/"/g, '');;
-					var currency = JSON.stringify(js[i].currency).replace(/"/g, '');;
-					var amount = JSON.stringify(js[i].amount).replace(/"/g, '');;
+					var type = JSON.stringify(js[i].type).replace(/"/g, '');
+					var currency = JSON.stringify(js[i].currency).replace(/"/g, '');
+					var amount = JSON.stringify(js[i].amount).replace(/"/g, '');
 
 					adapter.setObject('exchange.bitfinex.' + type + '_' + currency, {
 						type: 'state',
@@ -148,7 +153,7 @@ function main() {
 						},
 						native: {}
 					});
-					//adapter.log.info(type + ' - ' + currency + ' - ' + amount);
+					// adapter.log.info(type + ' - ' + currency + ' - ' + amount);
 					adapter.setState('exchange.bitfinex.' + type + '_' + currency, {val: amount, ack: true});
 				}
 			}
@@ -293,8 +298,5 @@ function main() {
 			call_wallet('xrp', adapter.config.xrp_wallet_adress, 'https://data.ripple.com/v2/accounts/', 0, true, '/balances', '')
 		}
 	}
-	
-	setTimeout(function () {
-		adapter.stop();
-	}, 40000);
+
 }
