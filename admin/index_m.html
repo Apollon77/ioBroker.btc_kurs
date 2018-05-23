@@ -53,6 +53,15 @@
 		$('#ont_okex').hide();
 		$('#qtum_okex').hide();
 		$('#etc_okex').hide();
+		$('#btc_binance').hide();
+		$('#eth_binance').hide();
+		$('#ltc_binance').hide();
+		$('#bcc_binance').hide();
+		$('#xrp_binance').hide();
+		$('#qtum_binance').hide();
+		$('#neo_binance').hide();
+		$('#bnb_binance').hide();
+		$('#ada_binance').hide();
 		
 		// TAB TICKER
 		if ($('#bitfinex').prop('checked')) {
@@ -109,6 +118,27 @@
 			$('#qtum_okex').hide();
 			$('#etc_okex').hide();
         }
+		if ($('#binance').prop('checked')) {
+            $('#btc_binance').show();
+			$('#eth_binance').show();
+			$('#ltc_binance').show();
+			$('#bcc_binance').show();
+			$('#xrp_binance').show();
+			$('#qtum_binance').show();
+			$('#neo_binance').show();
+			$('#bnb_binance').show();
+			$('#ada_binance').show();
+        } else {
+			$('#btc_binance').hide();
+			$('#eth_binance').hide();
+			$('#ltc_binance').hide();
+			$('#bcc_binance').hide();
+			$('#xrp_binance').hide();
+			$('#qtum_binance').hide();
+			$('#neo_binance').hide();
+			$('#bnb_binance').hide();
+			$('#ada_binance').hide();
+        }
 		
 		// TAB WALLET
 		if ($('#btc_wallet').prop('checked')) {
@@ -147,6 +177,7 @@
 		$('#xrp_wallet').on('change', showHideSettings);
 		$('#bitfinex').on('change', showHideSettings);
 		$('#okex').on('change', showHideSettings);
+		$('#binance').on('change', showHideSettings);
     }
 
 	// the function loadSettings has to exist ...
@@ -265,8 +296,6 @@
                     <label class="translate" for="etc_bitfinex">Ethereum Classic (ETC)</label>
                 </div>				
             </div>			
-			
-			
 			<div class="row">
                 <div class="col s12">
                     <h6 class="translate title">
@@ -324,7 +353,55 @@
                     <input class="value" id="etc_okex" type="checkbox" />
                     <label class="translate" for="etc_okex">Ethereum Classic (ETC)</label>
                 </div>
-			</div>			
+			</div>
+
+			<div class="row">
+                <div class="col s12">
+                    <h6 class="translate title">
+						<input id="binance" type="checkbox" class="value" />
+						<span for="binance">Binance</span>
+					</h6>
+                </div>
+            </div>
+			<div class="row">
+				<div class="input-field col s12 m2 10" id="btc_binance">
+                    <input class="value" id="btc_binance" type="checkbox" />
+                    <label class="translate" for="btc_binance">Bitcoin (BTC)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="eth_binance">
+                    <input class="value" id="eth_binance" type="checkbox" />
+                    <label class="translate" for="eth_binance">Ethereum (ETH)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="ltc_binance">
+                    <input class="value" id="ltc_binance" type="checkbox" />
+                    <label class="translate" for="ltc_binance">Litcoin (LTC)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="bcc_binance">
+                    <input class="value" id="bcc_binance" type="checkbox" />
+                    <label class="translate" for="bcc_binance">Bitcoin Cash (BCC)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="xrp_binance">
+                    <input class="value" id="xrp_binance" type="checkbox" />
+                    <label class="translate" for="xrp_binance">Ripple (XRP)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="qtum_binance">
+                    <input class="value" id="qtum_binance" type="checkbox" />
+                    <label class="translate" for="qtum_binance">Qtum (QTUM)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="neo_binance">
+                    <input class="value" id="neo_binance" type="checkbox" />
+                    <label class="translate" for="neo_binance">NEO (NEO)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="bnb_binance">
+                    <input class="value" id="bnb_binance" type="checkbox" />
+                    <label class="translate" for="bnb_binance">Binance Coin (BNB)</label>
+                </div>
+				<div class="input-field col s12 m2 10" id="ada_binance">
+                    <input class="value" id="ada_binance" type="checkbox" />
+                    <label class="translate" for="ada_binance">Cardano (ADA)</label>
+                </div>
+			</div>		
+			
         </div>
 		<div id="tab-wallet" class="col s12 page">
 			<div class="row">

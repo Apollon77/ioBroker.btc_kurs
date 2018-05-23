@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.2.9",
+        "version": "0.3.0",
         "news": {
+			"0.3.0": {
+				"en": "add Cardano (ADA), Binance Coin (BNB) and add exchange Binance",
+				"de": "Cardano (ADA), Binance Coin (BNB) hinzugefügt und Börse Binance hinzugefügt"
+			},
 			"0.2.9": {
 				"en": "fix npm",
 				"de": "Fehler in npm behoben"

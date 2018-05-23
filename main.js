@@ -50,6 +50,9 @@ function call_market_price(cryptoname, exchange, currency, url, partition) {
 				if (exchange == 'okex') {
 					var ticker = parseFloat(output.ticker.last);
 				}
+				if (exchange == 'binance') {
+					var ticker = parseFloat(output.price);
+				}
 				ticker = number_format(ticker,2,'.','');
 				adapter.setObject('ticker.' + exchange + '.' + cryptoname, {
 					type: 'state',
@@ -203,6 +206,36 @@ function main() {
 		}
 	}	
 
+		if (adapter.config.binance == true) {
+		var url = "https://api.binance.com/api/v3/ticker/price?symbol=";
+		if (adapter.config.btc_binance == true) {
+			call_market_price( 'BTC', 'binance', 'USDT', url, '');
+		}
+		if (adapter.config.eth_binance == true) {
+			call_market_price( 'ETH', 'binance', 'USDT', url, '');
+		}
+		if (adapter.config.ltc_binance == true) {
+			call_market_price( 'LTC', 'binance', 'USDT', url, '');
+		}
+		if (adapter.config.bcc_binance == true) {
+			call_market_price( 'BCC', 'binance', 'USDT', url, '');
+		}
+		if (adapter.config.xrp_binance == true) {
+			call_market_price( 'XRP', 'binance', 'USDT', url, '');
+		}
+		if (adapter.config.qtum_binance == true) {
+			call_market_price( 'QTUM', 'binance', 'USDT', url, '');
+		}
+		if (adapter.config.neo_binance == true) {
+			call_market_price( 'NEO', 'binance', 'USDT', url, '');
+		}
+		if (adapter.config.bnb_binance == true) {
+			call_market_price( 'BNB', 'binance', 'USDT', url, '');
+		}
+		if (adapter.config.ada_binance == true) {
+			call_market_price( 'ADA', 'binance', 'USDT', url, '');
+		}
+	}	
 	
 	// Wallet
 	if (adapter.config.btc_wallet == true) {

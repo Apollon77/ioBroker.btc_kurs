@@ -30,13 +30,19 @@ In addition, the private wallet address can be queried and also made available.
 		- Tron (TRX)
 		- Onology (ONT)
 		- Qtum (QTUM)
+		- Cardano (ADA)
+		- Binance Coin (BNB)
 	
 ###	Supported exchange:
   
 		- Bitfinex
 		- OKEx
+		- Binance
 		
 ## Changelog
+
+### 0.3.0
+* (HeinDeep) add Cardano (ADA), Binance Coin (BNB) and add exchange Binance
 
 ### 0.2.9
 * (HeinDeep) fix npm

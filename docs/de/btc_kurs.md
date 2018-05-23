@@ -30,13 +30,19 @@ Zusätzlich kann die Wallet abgefragt werden.
 		- Tron (TRX)
 		- Onology (ONT)
 		- Qtum (QTUM)
+		- Cardano (ADA)
+		- Binance Coin (BNB)
 	
 ###	Unterstützte Börsen:
   
 		- Bitfinex
 		- OKEx
+		- Binance
 		
 ## Changelog
+
+### 0.3.0
+* (HeinDeep) add Cardano (ADA), Binance Coin (BNB) and add exchange Binance
 
 ### 0.2.9
 * (HeinDeep) fix npm
