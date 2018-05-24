@@ -1,9 +1,13 @@
 {
     "common": {
         "name": "btc_kurs",
-        "version": "0.3.2",
+        "version": "0.3.3",
         "news": {
-			"0.3.1": {
+			"0.3.3": {
+				"en": "fix Readme",
+				"de": "Fehler in Readme behoben"
+			},
+			"0.3.2": {
 				"en": "fix bug multiinstancen",
 				"de": "Fehler in Multiinstanzen behoben"
 			},
@@ -115,11 +119,7 @@
         "type": "general",
         "restartAdapters": ["vis"]
     },
-    "native": {
-        "test1": true,
-        "test2": 42,
-        "mySelect": "auto"
-    },
+    "native": {},
     "objects": [
 
     ]

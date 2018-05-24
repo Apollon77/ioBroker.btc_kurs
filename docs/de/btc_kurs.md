@@ -38,8 +38,19 @@ Zusätzlich kann die Wallet und die Bitfinex Wallet (API-Key erforderlich) abgef
 		- Bitfinex
 		- OKEx
 		- Binance
+
+###	Spenden:
+		
+		- BTC 	3PHoz5VwmouLis14vXHNcDHVf9Y5EqmMMi
+		- BCH 	qrnzkjwwv3e4nz8a5jkryssjhca2g6vm8cyjpsw3sg
+		- DOGE 	9snMb5ThjBf5SEocUv5rfZeFKvtTf3RaE5
+		- LTC 	3JPTbTQc1jJSeDjKjZNQx7r8TT1rUmW1MS
+		- DASH	XueWWj8krRxsiphNSGKfXwQ1gK9QWs1RcF
 		
 ## Changelog
+
+### 0.3.3
+* (HeinDeep) fix Readme
 
 ### 0.3.2
 * (HeinDeep) fix bug multiinstancen
