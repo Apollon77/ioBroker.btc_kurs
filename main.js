@@ -1,6 +1,6 @@
 'use strict';
 
-var utils = require(__dirname + '/lib/utils');
+var utils = require('@iobroker/adapter-core');
 var request = require('request');
 var BFX = require('bitfinex-api-node');
 var adapter = new utils.Adapter('btc_kurs');
