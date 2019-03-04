@@ -106,6 +106,7 @@
         "authors": [
             "Andreas Mueller <heindeep15@googlemail.com>"
         ],
+        "license": "MIT",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/5 * * * *",
