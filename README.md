@@ -1,6 +1,6 @@
 ![Logo](admin/btc_kurs.png)
 # ioBroker.btc_kurs
-=================
+![Number of Installations](http://iobroker.live/badges/btc_kurs-installed.svg) ![Number of Installations](http://iobroker.live/badges/btc_kurs-stable.svg) =================
 
 [![NPM version](https://img.shields.io/npm/v/iobroker.btc_kurs.svg)](https://www.npmjs.com/package/iobroker.btc_kurs)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.btc_kurs.svg)](https://www.npmjs.com/package/iobroker.btc_kurs)
